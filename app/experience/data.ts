@@ -1,0 +1,91 @@
+export type Experience = {
+  company: string
+  location: string
+  position: string
+  period: string
+  projects: Array<{
+    name: string
+    tech: string[]
+    achievements: string[]
+  }>
+}
+
+export const experiences: Experience[] = [
+  {
+    company: 'GitRoll',
+    location: 'California, USA',
+    position: 'Full Stack Developer Intern',
+    period: 'Sep. 2024 - Dec. 2024',
+    projects: [
+      {
+        name: 'Productivity Tools',
+        tech: ['Next.js', 'TypeScript', 'Firebase'],
+        achievements: [
+          'Developed tools for process management, enabling visibility into queued processes and filtering out repositories, resulting in faster issue resolution',
+          'Integrated an open-source custom theme into the GitRoll Profile Card, showcasing developer performance metrics in an engaging format',
+        ],
+      },
+    ],
+  },
+  {
+    company: 'J.P.Morgan Chase & Co.',
+    location: 'Kowloon, Hong Kong',
+    position: 'Frontend Developer Intern, Post Trade Technology',
+    period: 'Jun. 2024 – Aug. 2024',
+    projects: [
+      {
+        name: 'Migration to React',
+        tech: ['React.js', 'Redux.js', 'Java', 'JSP', 'RESTful API'],
+        achievements: [
+          'Designed, implemented, tested a revamp of an in-house application from Java Servlet and JSP to a React.js with Redux.js frontend connected to a RESTful API backend, increasing maintainability, improving user experience and meeting performance demands via optimized rendering',
+        ],
+      },
+    ],
+  },
+  {
+    company: 'J.P.Morgan Chase & Co.',
+    location: 'Kowloon, Hong Kong',
+    position:
+      'Software Engineering Intern, Global Technology Infrastructure & Tech Production Delivery',
+    period: 'Jun. 2023 – Aug. 2023',
+    projects: [
+      {
+        name: 'Diversity, Equity, Inclusion Chatbot',
+        tech: ['ReactJS', 'NodeJS', 'TypeScript', 'API'],
+        achievements: [
+          "Led a team of 3 developer interns within a larger team of 6 to build a full-stack chatbot that uses NLP model fine-tuned for company's DEI rules",
+        ],
+      },
+      {
+        name: 'Streamlined Observability as Code and Automated CI/CD',
+        tech: ['Dynatrace', 'Terraform', 'Jenkins', 'Bash'],
+        achievements: [
+          'Implemented Terraform automation for programmatic creation of synthetic monitors for 10+ app services, reducing repetitive setup and configuration time to seconds, encouraging consistency across the infrastructure, and enabling proper tag policies for analysis of failure patterns across endpoints',
+        ],
+      },
+    ],
+  },
+  {
+    company: 'Super Cat Technology Limited',
+    location: 'Kowloon, Hong Kong',
+    position: 'Software Engineering Intern',
+    period: 'Jun. 2022 - Sep. 2022',
+    projects: [
+      {
+        name: 'Automated ML',
+        tech: ['Python', 'PyCaret', 'MongoDB', 'Fastapi', 'Streamlit'],
+        achievements: [
+          'Developed the Classification component of AutoML, utilizing user-defined criteria to identify optimal ML models for input data and accurately classify target data, resulting in improved customer churn prediction for client companies',
+          'Boosted T5-based Table QA accuracy from 60% to 88% by filtering columns through semantic search and checking their relevancy',
+        ],
+      },
+      {
+        name: 'Automated Multi-label text classification',
+        tech: ['Python', 'PyTorch', 'transformers'],
+        achievements: [
+          'Upgraded model used to analyze customer reviews from binary to multi-label sentiment analysis with topical grouping, allowing businesses to make data-driven decisions about where to focus improvement efforts every month',
+        ],
+      },
+    ],
+  },
+]
