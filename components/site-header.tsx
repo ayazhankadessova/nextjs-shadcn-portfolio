@@ -1,8 +1,6 @@
-'use client'
+import React from 'react'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import MobileNav from './mobile-nav'
-import { MainNav } from './main-nav'
+import { Github, Linkedin } from 'lucide-react'
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -11,105 +9,80 @@ import {
   NavigationMenuTrigger,
   NavigationMenuContent,
 } from '@/components/ui/navigation-menu'
-import headerNavLinks from '@/config/headerNavLinks'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 import { ThemeToggle } from './theme-toggle'
-import { ChevronDown } from 'lucide-react'
+import MobileNav from './mobile-nav'
+import { siteConfig } from '@/config/site'
+import headerNavLinks from '@/config/headerNavLinks'
 
 export function SiteHeader() {
-  const headerClass =
-    'container flex max-w-screen-2xl px-2 h-20 z-10 flex flex-row justify-between gap-2 items-center sticky top-0 bg-background'
-
   return (
-    <header className={headerClass}>
-      <MainNav />
+    <header className='sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
+      <div className='container flex h-16 items-center justify-between'>
+        <div className='flex gap-6 items-center'>
+          <Link
+            href='/'
+            className='text-lg font-semibold bg-gradient-to-r from-purple-600 to-green-500 bg-clip-text text-transparent'
+          >
+            {siteConfig.name}
+          </Link>
 
-      <div className='hidden min-[750px]:block ml-6'>
-        <NavigationMenu className='hidden max-w-30 sm:inline-block'>
-          <NavigationMenuList>
-            {Object.values(headerNavLinks).map((dialog) => (
-              <NavigationMenuItem key={dialog.title}>
-                {dialog.toggle ? (
-                  <>
+          <NavigationMenu className='hidden md:flex'>
+            <NavigationMenuList className='gap-6'>
+              {Object.values(headerNavLinks).map((dialog) =>
+                dialog.toggle ? (
+                  <NavigationMenuItem key={dialog.title}>
                     <NavigationMenuTrigger>
                       {dialog.title}
-                      <ChevronDown
-                        className='relative top-[1px] ml-1 h-3 w-3 transition duration-200 group-data-[state=open]:rotate-180'
-                        aria-hidden='true'
-                      />
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]'>
-                        {dialog.dropdown.map((component) => (
+                      <ul className='grid gap-3 p-4 w-[400px] md:w-[500px] lg:w-[600px]'>
+                        {dialog.dropdown.map((item) => (
                           <ListItem
-                            key={component.title}
-                            title={component.title}
-                            href={component.href}
+                            key={item.title}
+                            title={item.title}
+                            href={item.href}
                           >
-                            {component.description}
+                            {item.description}
                           </ListItem>
                         ))}
                       </ul>
                     </NavigationMenuContent>
-                  </>
+                  </NavigationMenuItem>
                 ) : (
-                  <Link href={dialog.href}>
-                    <NavigationMenuTrigger>
-                      {dialog.title}
-                    </NavigationMenuTrigger>
-                  </Link>
-                )}
-              </NavigationMenuItem>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
-
-      <div className='min-[750px]:hidden'>
-        <MobileNav />
-      </div>
-
-      <div className='hidden min-[750px]:inline-flex items-end'>
-        <div>
-          <ThemeToggle />
+                  <NavigationMenuItem key={dialog.title}>
+                    <Link href={dialog.href} legacyBehavior passHref>
+                      <NavigationMenuLink className='text-sm font-medium hover:text-purple-500 transition-colors'>
+                        {dialog.title}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                )
+              )}
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
-        <Link
-          href=''
-          className={cn(
-            buttonVariants({ variant: 'default', size: 'sm' }),
-            'group justify-center rounded-md bg-primary text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50'
-          )}
-        >
-          Contact Us
-        </Link>
+
+        <div className='flex items-center gap-4'>
+          <div className='hidden md:flex items-center gap-4'>
+            <Link
+              href={siteConfig.socials.linkedin}
+              className='hover:text-purple-500 transition-colors'
+            >
+              <Github className='h-5 w-5' />
+            </Link>
+            <Link
+              href={siteConfig.socials.linkedin}
+              className='hover:text-purple-500 transition-colors'
+            >
+              <Linkedin className='h-5 w-5' />
+            </Link>
+            <ThemeToggle />
+          </div>
+          <div className='md:hidden'>
+            <MobileNav />
+          </div>
+        </div>
       </div>
     </header>
   )
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<'a'>,
-  React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-            className
-          )}
-          {...props}
-        >
-          <div className='text-sm font-medium leading-none'>{title}</div>
-          <p className='line-clamp-2 text-sm leading-snug text-muted-foreground'>
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  )
-})
-ListItem.displayName = 'ListItem'

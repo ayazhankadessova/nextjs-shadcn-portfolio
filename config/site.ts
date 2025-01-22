@@ -3,7 +3,7 @@
 // export type of siteConfig
 
 export const siteConfig = {
-  name: 'Gitroll',
+  name: 'AyazhanKad',
   url: 'https://gitroll.io',
   description:
     'GitRoll shows the real coding skills of developers✨Talk is cheap. Show me the code.',

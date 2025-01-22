@@ -6,7 +6,7 @@ import { experiences } from './data'
 
 export default function Experience() {
   return (
-    <div className='container max-w-4xl mx-auto py-16'>
+    <div className='container max-w-4xl mx-auto px-8 py-16'>
       <h1 className='text-4xl font-bold mb-8'>Experience</h1>
 
       <div className='space-y-8'>

@@ -22,7 +22,7 @@ export default function About() {
   ]
 
   return (
-    <div className='container max-w-4xl mx-auto px-6 py-16'>
+    <div className='container max-w-4xl mx-auto px-8 py-16'>
       {/* Hero Section */}
       <section className='mb-16'>
         <h1 className='text-4xl font-bold mb-6'>Hello! My name is Aya!</h1>
