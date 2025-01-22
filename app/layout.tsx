@@ -9,8 +9,8 @@ import { Providers } from '@/components/providers'
 const inter = Inter({ subsets: ['latin'], variable: '--font-mono' })
 
 export const metadata: Metadata = {
-  title: 'GitRoll | Blog',
-  description: 'Read articles by GitRoll',
+  title: 'AyazhanKad | Blog',
+  description: 'Read articles by AyazhanKad',
 }
 
 export default function RootLayout({

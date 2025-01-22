@@ -33,7 +33,7 @@ export function BlogFooter() {
           </a>
         </div>
         <p className='mt-2 text-sm font-light'>
-          © 2024 GitRoll, all rights reserved
+          © 2025 AyazhanKad, all rights reserved
         </p>
         <div className='mt-2 flex gap-x-4 gap-y-2 text-xs text-muted-foreground items-center justify-center underline flex-wrap lg:gap-x-6'>
           <Link href='/terms-of-use' className='mr-2'>

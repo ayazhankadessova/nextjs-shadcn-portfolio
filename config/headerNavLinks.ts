@@ -32,7 +32,7 @@ const dialogsInfo: DialogsInfo = {
   //       title: 'For Companies',
   //       href: '',
   //       description:
-  //         'Discover how GitRoll can help you find or assess your next developer.',
+  //         'Discover how AyazhanKad can help you find or assess your next developer.',
   //     },
   //     {
   //       title: 'Dev Login',
@@ -55,7 +55,7 @@ const dialogsInfo: DialogsInfo = {
   //     {
   //       title: 'Our Story',
   //       href: '/ourstory',
-  //       description: 'Story About How We started GitRoll',
+  //       description: 'Story About How We started AyazhanKad',
   //     },
   //     {
   //       title: 'Our Algorithm',
@@ -82,7 +82,7 @@ const dialogsInfo: DialogsInfo = {
       {
         title: 'Out Story',
         href: '/docs/primitives/alert-dialog',
-        description: 'Story About How We started GitRoll',
+        description: 'Story About How We started AyazhanKad',
       },
       {
         title: 'Hover Card',
@@ -111,7 +111,7 @@ const dialogsInfo: DialogsInfo = {
       {
         title: 'Out Story',
         href: '/docs/primitives/alert-dialog',
-        description: 'Story About How We started GitRoll',
+        description: 'Story About How We started AyazhanKad',
       },
       {
         title: 'Hover Card',
@@ -140,7 +140,7 @@ const dialogsInfo: DialogsInfo = {
       {
         title: 'Out Story',
         href: '/docs/primitives/alert-dialog',
-        description: 'Story About How We started GitRoll',
+        description: 'Story About How We started AyazhanKad',
       },
       {
         title: 'Hover Card',
@@ -169,7 +169,7 @@ const dialogsInfo: DialogsInfo = {
       {
         title: 'Out Story',
         href: '/docs/primitives/alert-dialog',
-        description: 'Story About How We started GitRoll',
+        description: 'Story About How We started AyazhanKad',
       },
       {
         title: 'Hover Card',
@@ -198,7 +198,7 @@ const dialogsInfo: DialogsInfo = {
       {
         title: 'Out Story',
         href: '/docs/primitives/alert-dialog',
-        description: 'Story About How We started GitRoll',
+        description: 'Story About How We started AyazhanKad',
       },
       {
         title: 'Hover Card',
