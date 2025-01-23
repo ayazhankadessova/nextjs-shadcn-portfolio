@@ -37,7 +37,7 @@ export function SiteHeader() {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className='grid gap-3 p-4 w-[400px] md:w-[500px] lg:w-[600px]'>
-                        {dialog.dropdown.map((item) => (
+                        {dialog.dropdown?.map((item) => (
                           <ListItem
                             key={item.title}
                             title={item.title}
@@ -66,7 +66,7 @@ export function SiteHeader() {
         <div className='flex items-center gap-4'>
           <div className='hidden md:flex items-center gap-4'>
             <Link
-              href={siteConfig.socials.linkedin}
+              href={siteConfig.socials.github}
               className='hover:text-purple-500 transition-colors'
             >
               <Github className='h-5 w-5' />

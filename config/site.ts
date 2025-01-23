@@ -6,14 +6,15 @@ export const siteConfig = {
   name: 'AyazhanKad',
   url: 'https://AyazhanKad.io',
   description:
-    'AyazhanKad shows the real coding skills of developers✨Talk is cheap. Show me the code.',
+    'Hey, I am Aya :) I like building apps!',
   socials: {
     discord: 'https://discord.com/invite/EEw3u9PVqA',
-    linkedin: 'https://www.linkedin.com/company/AyazhanKad/',
+    linkedin: 'https://www.linkedin.com/in/ayazhankad',
     twitter: 'https://x.com/AyazhanKad_io',
-    youtube: 'https://www.youtube.com/watch?v=hI5cjgtdLr0',
+    youtube: 'https://www.youtube.com/@ayazhankadessova330',
     medium: 'https://AyazhanKad.medium.com',
     contactUs: 'https://AyazhanKad.io/contact',
+    github: 'https://github.com/ayazhankadessova',
   },
   stickyNav: true,
   author: 'AyazhanKad',
