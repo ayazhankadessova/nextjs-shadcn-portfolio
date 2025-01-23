@@ -26,6 +26,11 @@ const dialogsInfo: DialogsInfo = {
     href: '/blog',
     toggle: false,
   },
+  Contact: {
+    title: 'Contact',
+    href: '/contact',
+    toggle: false,
+  },
 }
 
 export default dialogsInfo

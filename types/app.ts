@@ -14,3 +14,15 @@ interface DialogInfo {
 export interface DialogsInfo {
   [key: string]: DialogInfo
 }
+
+export type SkillGroup = {
+  id: string
+  title: string
+  skills: string[]
+}
+
+export type ContactInfo = {
+  email: string
+  telegram: string
+  description: string
+}

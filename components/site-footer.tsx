@@ -4,49 +4,81 @@ import Link from 'next/link'
 
 export function BlogFooter() {
   return (
-    <footer className='flex flex-col gap-4 items-center justify-center pb-8 container'>
-      <div className='mb-6 mt-14 flex flex-col items-center'>
-        <div className='mb-3 flex gap-8'>
-          <a target='_blank' rel='noreferrer' href={siteConfig.socials.discord}>
-            <span className='sr-only'>Discord</span>
-            <Icons.discord className='h-8 w-8' />
-          </a>
-          <a
-            target='_blank'
-            rel='noreferrer'
-            href={siteConfig.socials.linkedin}
-          >
-            <span className='sr-only'>Linkedin</span>
-            <Icons.linkedin className='h-6 w-6' />
-          </a>
-          <a target='_blank' rel='noreferrer' href={siteConfig.socials.twitter}>
-            <span className='sr-only'>Twitter</span>
-            <Icons.twitter className='h-6 w-6' />
-          </a>
-          <a target='_blank' rel='noreferrer' href={siteConfig.socials.youtube}>
-            <span className='sr-only'>YouTube</span>
-            <Icons.youtube className='h-10 w-10' />
-          </a>
-          <a target='_blank' rel='noreferrer' href={siteConfig.socials.medium}>
-            <span className='sr-only'>Medium</span>
-            <Icons.medium className='h-10 w-10' />
-          </a>
+    <footer className="border-t">
+      <div className="container max-w-6xl py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* About Section */}
+        <div className="md:col-span-2">
+          <Link href="/" className="text-lg font-semibold mb-4 block">
+            {siteConfig.name}
+          </Link>
+          <p className="text-sm text-muted-foreground mb-4">
+            Building digital experiences with clean aesthetics and thoughtful interactions.
+          </p>
         </div>
-        <p className='mt-2 text-sm font-light'>
-          © 2025 AyazhanKad, all rights reserved
-        </p>
-        <div className='mt-2 flex gap-x-4 gap-y-2 text-xs text-muted-foreground items-center justify-center underline flex-wrap lg:gap-x-6'>
-          <Link href='/terms-of-use' className='mr-2'>
-            <p className='underline text-sm text-gray-500'>Terms of Use</p>
-          </Link>
-          <Link href='/subscription-agreement' className='mr-2'>
-            <p className='underline text-sm text-gray-500'>
-              Subscription Agreement
-            </p>
-          </Link>
-          <Link href='/privacy-policy'>
-            <p className='underline text-sm text-gray-500'>Privacy Policy</p>
-          </Link>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="font-medium mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link href="/blog" className="text-muted-foreground hover:text-foreground transition">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/projects" className="text-muted-foreground hover:text-foreground transition">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="text-muted-foreground hover:text-foreground transition">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Legal */}
+        <div>
+          <h3 className="font-medium mb-4">Legal</h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link href="/privacy-policy" className="text-muted-foreground hover:text-foreground transition">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms-of-use" className="text-muted-foreground hover:text-foreground transition">
+                Terms of Use
+              </Link>
+            </li>
+            <li>
+              <Link href="/subscription-agreement" className="text-muted-foreground hover:text-foreground transition">
+                Subscription Agreement
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t">
+        <div className="container max-w-6xl py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-6">
+            {Object.entries(siteConfig.socials).map(([platform, url]) => (
+              <a key={platform} href={url} target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition">
+                <span className="sr-only">{platform}</span>
+                {/* @ts-ignore */}
+                <Icons.Discord/>
+              </a>
+            ))}
+          </div>
+          
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <p>© 2025 {siteConfig.name}</p>
+            <span>•</span>
+            <p>Made with ♥ by ayazhankad</p>
+          </div>
         </div>
       </div>
     </footer>

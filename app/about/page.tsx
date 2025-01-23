@@ -2,24 +2,9 @@ import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
+import { skillGroups } from '@/data/skills'
 
 export default function About() {
-  const frontendTech = [
-    'Python',
-    'Java',
-    'SQL & Oracle',
-    'HTML & CSS & Javascript',
-    'React.js',
-    'Node.js, Typescript',
-  ]
-  const sreTech = [
-    'Terraform',
-    'AWS, Azure',
-    'Dynatrace',
-    'Jules, Jenkins, Groovy',
-    'Grafana',
-    'Gaia',
-  ]
 
   return (
     <div className='container max-w-4xl mx-auto px-8 py-16'>
@@ -95,31 +80,19 @@ export default function About() {
         <h2 className='text-2xl font-bold mb-6'>Technologies</h2>
 
         <div className='space-y-8'>
-          <div>
-            <h3 className='text-xl font-semibold mb-4'>
-              Frontend/Backend Development
-            </h3>
-            <div className='flex flex-wrap gap-2'>
-              {frontendTech.map((tech) => (
-                <Badge key={tech} variant='secondary' className='text-sm'>
-                  {tech}
-                </Badge>
-              ))}
+          {skillGroups.map((group, index) => (
+            <div key={group.id}>
+              {index > 0 && <Separator className='my-8' />}
+              <h3 className='text-xl font-semibold mb-4'>{group.title}</h3>
+              <div className='flex flex-wrap gap-2'>
+                {group.skills.map((tech) => (
+                  <Badge key={tech} variant='secondary' className='text-sm'>
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
             </div>
-          </div>
-
-          <Separator className='my-8' />
-
-          <div>
-            <h3 className='text-xl font-semibold mb-4'>SRE/Cloud/Others</h3>
-            <div className='flex flex-wrap gap-2'>
-              {sreTech.map((tech) => (
-                <Badge key={tech} variant='secondary' className='text-sm'>
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </div>
