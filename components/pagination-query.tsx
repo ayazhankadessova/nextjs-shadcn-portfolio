@@ -32,7 +32,7 @@ export function CustomPagination({
   const searchParams = useSearchParams()
 
   const currentPage = Number(searchParams.get('page')) || 1
-  const currentPerPage = Number(searchParams.get('perPage')) || 2
+  const currentPerPage = Number(searchParams.get('perPage')) || 5
 
   const prevPage = currentPage - 1
   const nextPage = currentPage + 1
@@ -66,9 +66,9 @@ export function CustomPagination({
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectItem value='2'>2</SelectItem>
               <SelectItem value='5'>5</SelectItem>
               <SelectItem value='10'>10</SelectItem>
+              <SelectItem value='15'>15</SelectItem>
             </SelectGroup>
           </SelectContent>
         </Select>

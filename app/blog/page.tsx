@@ -40,7 +40,7 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
       ? sortPosts(publishedPosts)
       : sortPostsByTitle(publishedPosts)
   const currentPage = Number(searchParams?.page) || 1
-  const currentPerPage = Number(searchParams?.perPage) || 2
+  const currentPerPage = Number(searchParams?.perPage) || 5
 
   const totalPages = Math.ceil(publishedPosts.length / currentPerPage)
 
@@ -60,13 +60,14 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
   }
 
   return (
-    <div className='container max-w-4xl py-2 lg:py-3 px-0'>
-      <div className='mb-6 pr-20 mr-20 '>
+    <div className='container max-w-4xl mx-auto px-8 py-16'>
+      <div className='flex mb-6 w-half'>
         <Input
           type='text'
           placeholder='Search'
           value={searchText}
           onChange={handleSearchTextChange}
+          className='border border-gray-300 rounded-md'
         />
       </div>
       <div className='flex justify-between'>

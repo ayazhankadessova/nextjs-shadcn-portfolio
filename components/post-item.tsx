@@ -26,10 +26,10 @@ export function PostItem({ post }: PostItemProps) {
           <div className='flex justify-between'>
             <div className='flex items-center'>
               <Avatar className='h-5 w-10 mr-2'>
-                <AvatarImage src='/gitroll.png' />
+                <AvatarImage src='/me.png' />
               </Avatar>
               <div>
-                <p className='text-sm font-bold'>GitRoll</p>
+                <p className='text-sm font-bold'>AyazhanKad</p>
                 <time className='text-sm' suppressHydrationWarning>
                   {formatDate(date)}
                 </time>

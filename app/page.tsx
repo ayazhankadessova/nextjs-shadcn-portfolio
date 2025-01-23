@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { Menu } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -11,8 +10,12 @@ export default function Home() {
         Minimalist Designer.
       </h1>
       <p className='text-xl text-gray-600 dark:text-gray-300 mb-12'>
-        Hey there, I am Aya. I love minimalistic & simple things - websites included. 
-        I love running, swimming, skiing, and ok I will complete this part later :)
+        Hey there, I am Aya. I love minimalistic & simple things - websites
+        included. I am a 2x Software Engineering Intern at J.P. Morgan,
+        full-stack Software Developer and a life-long learner. I am a senior BSc
+        in Computer Science, with a concentration in Computing and Software
+        Technologies at Hong Kong Baptist University. I love running, swimming,
+        skiing, and ok I will complete this part later :)
       </p>
       <div className='flex space-x-4'>
         <Link
