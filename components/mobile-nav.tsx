@@ -40,7 +40,7 @@ export default function MobileNav() {
     <Sheet open={open} onOpenChange={onToggleNav}>
       <ThemeToggle />
       <SheetTrigger asChild>
-        <Button variant='ghost' className='w-10 px-0 min-[750px]:hidden'>
+        <Button variant='ghost' className='w-10 px-0 md:hidden'>
           <Menu className='h-[1.1rem] w-[1.2rem]' />
         </Button>
       </SheetTrigger>
