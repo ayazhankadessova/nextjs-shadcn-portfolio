@@ -13,8 +13,8 @@ export const siteConfig = {
     twitter: 'https://x.com/AyazhanKad_io',
     youtube: 'https://www.youtube.com/@ayazhankadessova330',
     medium: 'https://AyazhanKad.medium.com',
-    contactUs: 'https://AyazhanKad.io/contact',
     github: 'https://github.com/ayazhankadessova',
+    email: 'kadessovaayazhan@gmail.com'
   },
   stickyNav: true,
   author: 'AyazhanKad',

@@ -33,7 +33,7 @@ export const Icons = {
       />
     </svg>
   ),
-  GitHub: (props: IconProps) => (
+  Github: (props: IconProps) => (
     <svg viewBox='0 0 438.549 438.549' {...props}>
       <path
         fill='currentColor'
