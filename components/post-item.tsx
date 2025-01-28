@@ -20,43 +20,44 @@ export function PostItem({ post }: PostItemProps) {
   const { slug, title, description, date, tags, image } = post
 
   return (
-    <article className='flex-1 flex flex-col gap-2 border-border border-b py-3'>
-      <div className='flex flex-col-reverse sm:flex-row justify-between'>
-        <div className='flex-1'>
-          <div className='flex justify-between'>
-            <div className='flex items-center'>
-              <Avatar className='h-5 w-10 mr-2'>
-                <AvatarImage src='/me.png' />
-              </Avatar>
-              <div>
-                <p className='text-sm font-bold'>AyazhanKad</p>
-                <time className='text-sm' suppressHydrationWarning>
-                  {formatDate(date)}
-                </time>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h2 className='text-2xl font-bold'>
-              <Link href={'/' + slug}>{title}</Link>
-            </h2>
-          </div>
-          <div className='max-w-none text-muted-foreground'>{description}</div>
-          <div className='flex gap-2 mt-2'>
-            {tags?.map((tag) => (
-              <Tag tag={tag} key={tag} />
+    <article className='grid grid-cols-[240px_1fr] gap-8'>
+      {/* Image Section */}
+      <div className='relative h-40 group'>
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className='object-cover rounded-lg shadow-md'
+        />
+        <div className='absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors rounded-lg' />
+      </div>
+
+      {/* Content Section */}
+      <div>
+        <div className='text-xs text-muted-foreground'>
+          <time suppressHydrationWarning>{formatDate(date)}</time>
+        </div>
+
+        <Link href={'/' + slug} className='block group'>
+          <h2 className='text-lg font-bold tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
+            {title}
+            <span className='font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
+              ↗
+            </span>
+          </h2>
+        </Link>
+
+        {description && (
+          <p className='text-sm text-muted-foreground mt-2'>{description}</p>
+        )}
+
+        {tags && tags.length > 0 && (
+          <div className='flex flex-wrap gap-2 mt-3'>
+            {tags.map((tag) => (
+              <Tag key={tag} tag={tag} />
             ))}
           </div>
-        </div>
-        <div>
-          <Image
-            src={image}
-            alt=''
-            className='rounded-lg sm:w-[12rem] xl:w-full p-4'
-            width={500}
-            height={100}
-          />
-        </div>
+        )}
       </div>
     </article>
   )

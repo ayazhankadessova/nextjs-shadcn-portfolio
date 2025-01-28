@@ -34,3 +34,18 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
 ]
+
+// data/socialImpact.ts
+export const socialImpact = [
+  {
+    title: 'Tech Workshop Leader',
+    organization: 'Women Who Code',
+    description: 'Led workshops teaching web development to aspiring female developers.',
+  },
+  {
+    title: 'Mentor',
+    organization: 'CS Student Association',
+    description: 'Mentored junior students in programming and career development.',
+  },
+  // Add more items...
+];

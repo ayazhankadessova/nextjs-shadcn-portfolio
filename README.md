@@ -22,7 +22,8 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-# fix experiences page
+- [x] fix experiences page
+- [x] fix projects page
 # fix about page
 # add projects (make sure info is up to date)
 # check dark mode

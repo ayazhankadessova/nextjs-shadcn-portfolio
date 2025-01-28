@@ -16,14 +16,14 @@ const dialogsInfo: DialogsInfo = {
     href: '/projects',
     toggle: false,
   },
-  Hobbies: {
-    title: 'Hobbies',
-    href: '/hobbies',
-    toggle: false,
-  },
   Blog: {
     title: 'Blog',
     href: '/blog',
+    toggle: false,
+  },
+  Hobbies: {
+    title: 'Hobbies',
+    href: '/hobbies',
     toggle: false,
   },
   Contact: {
