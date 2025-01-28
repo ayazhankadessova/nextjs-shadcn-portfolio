@@ -20,7 +20,7 @@ export const experiences: Experience[] = [
   {
     company: 'J.P.Morgan Chase & Co.',
     location: 'Kowloon, Hong Kong',
-    position: 'Frontend Developer Intern, Post Trade Technology',
+    position: 'Frontend Developer Intern',
     period: 'Jun. 2024 – Aug. 2024',
     projects: [
       {
@@ -36,7 +36,7 @@ export const experiences: Experience[] = [
     company: 'J.P.Morgan Chase & Co.',
     location: 'Kowloon, Hong Kong',
     position:
-      'Software Engineering Intern, Global Technology Infrastructure & Tech Production Delivery',
+      'Software Engineering Intern',
     period: 'Jun. 2023 – Aug. 2023',
     projects: [
       {
