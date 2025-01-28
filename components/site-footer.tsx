@@ -2,7 +2,7 @@ import { siteConfig } from '@/config/site'
 import { Icons } from './icons'
 import headerNavLinks from '@/config/headerNavLinks'
 import { contactInfo } from '@/data/contact'
-import { MailPlus, Send, Github } from 'lucide-react'
+import { Mail, Send, Github } from 'lucide-react'
 import Link from 'next/link'
 import { capitalize } from '@/lib/utils'
 
@@ -76,7 +76,7 @@ export function BlogFooter() {
                     href={`mailto:${contactInfo.email}`}
                     className='text-muted-foreground hover:text-foreground transition flex items-center gap-2'
                   >
-                    <MailPlus className='h-4 w-4' />
+                    <Mail className='h-4 w-4' />
                     {contactInfo.email}
                   </Link>
                 </li>

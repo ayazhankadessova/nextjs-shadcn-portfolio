@@ -17,7 +17,7 @@ export default function Experience() {
 
             {/* Content Section */}
             <div>
-              <h3 className='text-lg font-semibold tracking-tight'>
+              <h3 className='text-lg font-medium tracking-tight'>
                 {exp.position} • {exp.company}
               </h3>
               {/* Projects */}
