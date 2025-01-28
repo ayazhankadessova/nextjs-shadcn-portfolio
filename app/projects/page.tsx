@@ -14,92 +14,85 @@ import Image from 'next/image'
 import { projects } from '@/data/projects'
 
 export default function ProjectsPage() {
-
   return (
     <div className='container max-w-4xl mx-auto px-8 py-16'>
-      <div className='max-w-6xl mx-auto'>
-        <h1 className='text-4xl font-bold mb-2'>Projects</h1>
-        <p className='text-gray-600 dark:text-gray-300 mb-12'>
-          Selected works showcasing my technical expertise and creativity
-        </p>
+      <h1 className='text-3xl font-bold mb-8'>Projects</h1>
 
-        <div className='space-y-24'>
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className={`flex flex-col lg:flex-row gap-8 ${
-                index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-              }`}
-            >
-              <div className='lg:w-1/2 group perspective'>
-                <div className='relative h-64 lg:h-80 transform transition-transform duration-500 group-hover:rotate-y-6'>
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className='object-cover rounded-lg shadow-xl'
-                  />
-                  <div className='absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors rounded-lg' />
+      <div className='space-y-16'>
+        {projects.map((project, index) => (
+          <div key={index} className='grid grid-cols-[240px_1fr] gap-8'>
+            {/* Image Section */}
+            <div className='relative h-40 group'>
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className='object-cover rounded-lg shadow-md'
+              />
+              <div className='absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors rounded-lg' />
+            </div>
+
+            {/* Content Section */}
+            <div>
+              <div className='mb-2'>
+                <h3 className='text-lg font-bold tracking-tight'>
+                  {project.title}
+                </h3>
+                <p className='text-sm text-muted-foreground mt-1'>
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Project Details */}
+              <div className='mt-4'>
+                <ul className='space-y-2'>
+                  {project.points.map((point, idx) => (
+                    <li
+                      key={idx}
+                      className='text-sm text-muted-foreground flex gap-2'
+                    >
+                      <span>-</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Technologies */}
+                <div className='flex flex-wrap gap-2 mt-4'>
+                  {project.tech.map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant='secondary'
+                      className='text-xs font-normal'
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+
+                {/* Links */}
+                <div className='flex gap-4 mt-4'>
+                  <Button
+                    variant='ghost'
+                    size='sm'
+                    className='text-sm gap-2 hover:bg-transparent hover:text-primary'
+                  >
+                    <Github className='w-4 h-4' />
+                    View Code
+                  </Button>
+                  <Button
+                    variant='ghost'
+                    size='sm'
+                    className='text-sm gap-2 hover:bg-transparent hover:text-primary'
+                  >
+                    <ExternalLink className='w-4 h-4' />
+                    Live Demo
+                  </Button>
                 </div>
               </div>
-
-              <div className='lg:w-1/2'>
-                <Card className='h-full border-none shadow-none bg-transparent'>
-                  <CardHeader className='space-y-4 p-0'>
-                    <div className='space-y-2'>
-                      <CardTitle className='text-2xl bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent'>
-                        {project.title}
-                      </CardTitle>
-                      <CardDescription className='text-base'>
-                        {project.description}
-                      </CardDescription>
-                    </div>
-
-                    <div className='flex flex-wrap gap-2'>
-                      {project.tech.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant='secondary'
-                          className='bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors'
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardHeader>
-
-                  <CardContent className='p-0 mt-6'>
-                    <ul className='space-y-3 text-gray-600 dark:text-gray-300'>
-                      {project.points.map((point, idx) => (
-                        <li key={idx} className='leading-relaxed flex gap-2'>
-                          <span className='text-purple-500'>•</span>
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-
-                  <CardFooter className='flex gap-4 p-0 mt-6'>
-                    <Button
-                      variant='outline'
-                      className='hover:bg-purple-50 dark:hover:bg-gray-800'
-                    >
-                      <Github className='w-4 h-4 mr-2' />
-                      View Code
-                    </Button>
-                    <Button
-                      variant='outline'
-                      className='hover:bg-purple-50 dark:hover:bg-gray-800'
-                    >
-                      <ExternalLink className='w-4 h-4 mr-2' />
-                      Live Demo
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   )

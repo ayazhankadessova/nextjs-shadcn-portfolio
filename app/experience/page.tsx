@@ -9,7 +9,7 @@ export default function Experience() {
 
       <div className='space-y-12'>
         {experiences.map((exp, index) => (
-          <div key={index} className='grid grid-cols-[180px_1fr] gap-8'>
+          <div key={index} className='grid grid-cols-[240px_1fr] gap-8'>
             {/* Date Section */}
             <div className='text-sm text-muted-foreground font-medium'>
               {exp.period}
