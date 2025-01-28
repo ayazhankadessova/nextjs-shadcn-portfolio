@@ -2,7 +2,7 @@ import { siteConfig } from '@/config/site'
 import { Icons } from './icons'
 import headerNavLinks from '@/config/headerNavLinks'
 import { contactInfo } from '@/data/contact'
-import { Mail, Send, Github } from 'lucide-react'
+import { MailPlus, Send, Github } from 'lucide-react'
 import Link from 'next/link'
 import { capitalize } from '@/lib/utils'
 
@@ -12,7 +12,7 @@ export function BlogFooter() {
       <div className='container max-w-6xl py-12 px-8'>
         <div className='grid grid-cols-1 md:grid-cols-12 gap-8'>
           {/* About Section - 6 columns */}
-          <div className='flex flex-col md:col-span-6'>
+          <div className='flex flex-col md:col-span-7 pr-10'>
             <Link href='/' className='text-lg font-semibold mb-4 block'>
               {siteConfig.name}
             </Link>
@@ -46,7 +46,7 @@ export function BlogFooter() {
           </div>
 
           {/* Navigation - 3 columns */}
-          <div className='flex flex-col md:col-span-3'>
+          <div className='flex flex-col md:col-span-1'>
             <div className='flex justify-center'>
               <div>
                 <h3 className='font-medium mb-4'>Navigation</h3>
@@ -67,16 +67,16 @@ export function BlogFooter() {
           </div>
 
           {/* Contact & Contribute - 3 columns */}
-          <div className='flex flex-col md:col-span-3'>
+          <div className='flex flex-col md:col-span-4 pl-10'>
             <div className='w-full'>
-              <h3 className='font-medium mb-4'>Get in Touch</h3>
+              <h3 className='font-medium mb-5'>Get in Touch</h3>
               <ul className='space-y-2 text-sm'>
                 <li>
                   <Link
                     href={`mailto:${contactInfo.email}`}
                     className='text-muted-foreground hover:text-foreground transition flex items-center gap-2'
                   >
-                    <Mail className='h-4 w-4' />
+                    <MailPlus className='h-4 w-4' />
                     {contactInfo.email}
                   </Link>
                 </li>
