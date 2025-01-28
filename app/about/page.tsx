@@ -11,21 +11,16 @@ export default function AboutPage() {
         <div className='space-y-6 text-muted-foreground'>
           <p className='space-y-4 leading-relaxed'>
             I am a developer with a passion for creating intuitive and engaging
-            web experiences. Currently, I am a 2x{' '}
-            <span className='text-foreground font-medium'>
-              Software Engineering Intern
-            </span>{' '}
-            at{' '}
+            web experiences. Currently, I am building{' '}
             <a
-              href='https://careers.jpmorgan.com/global/en/students/programs/software-engineer-summer'
+              href='https://python-bit.vercel.app'
               target='_blank'
               rel='noopener noreferrer'
               className='text-primary hover:text-primary/80 transition-colors'
             >
-              J.P. Morgan
+              PythonBit
             </a>
-            , where I have had the opportunity to work on large-scale financial
-            applications and develop robust solutions.
+            , web platform to help students gain confidence in Python via real-time classrooms, tutorials, and fun projects.
           </p>
           <p>
             As a senior pursuing a{' '}

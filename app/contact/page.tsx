@@ -9,7 +9,7 @@ export default function ContactPage() {
 
   return (
     <div className='container max-w-4xl mx-auto px-8 py-16'>
-      <h1 className='text-4xl font-bold mb-12'>Get in Touch</h1>
+      <h1 className='text-3xl font-bold'>Contact</h1>
 
       <div className='text-center'>
         <h2 className='text-2xl font-semibold mb-4'>Want to Collaborate?</h2>

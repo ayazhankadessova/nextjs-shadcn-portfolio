@@ -37,7 +37,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <div className='container max-w-xl lg:max-w-[850px] mx-auto px-4 py-6 md:px-6'>
+    <div className='container max-w-4xl mx-auto px-8 py-16'>
       <div className='flex items-start justify-between'>
         <BackButton />
         <SharePost fullLink={fullLinkGenerated} />

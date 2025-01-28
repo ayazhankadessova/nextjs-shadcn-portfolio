@@ -4,8 +4,7 @@ import { hobbies } from '@/data/hobbies'
 export default function HobbiesPage() {
   return (
     <div className='container max-w-4xl mx-auto px-8 py-16'>
-      <h1 className='text-4xl font-bold mb-12'>Life Beyond Code</h1>
-
+      <h1 className='text-3xl font-bold mb-8'>Hobbies</h1>
       {hobbies.map((hobby) => (
         <section key={hobby.id} className={'mb-16'}>
           <h2 className='text-2xl font-semibold mb-6'>{hobby.title}</h2>

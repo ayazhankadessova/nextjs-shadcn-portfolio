@@ -1,10 +1,9 @@
 import { siteConfig } from '@/config/site'
-import { Icons } from './icons'
 import headerNavLinks from '@/config/headerNavLinks'
 import { contactInfo } from '@/data/contact'
 import { Mail, Send, Github } from 'lucide-react'
 import Link from 'next/link'
-import { capitalize } from '@/lib/utils'
+import { AllSocials } from '@/components/all-socials'
 
 export function BlogFooter() {
   return (
@@ -23,26 +22,7 @@ export function BlogFooter() {
               careful attention to detail and user-centered development, I craft
               solutions that make a lasting impact.
             </p>
-            <div className='flex items-center gap-4'>
-              {Object.entries(siteConfig.socials).map(([platform, url]) => {
-                // Get the icon component dynamically
-                const IconComponent =
-                  Icons[capitalize(platform) as keyof typeof Icons]
-
-                return (
-                  <a
-                    key={platform}
-                    href={url}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='hover:text-foreground transition'
-                  >
-                    <span className='sr-only'>{platform}</span>
-                    {IconComponent && <IconComponent className='h-5 w-5' />}
-                  </a>
-                )
-              })}
-            </div>
+            <AllSocials/>
           </div>
 
           {/* Navigation - 3 columns */}

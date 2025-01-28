@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import { cn, formatDate } from '@/lib/utils'
-import { Tag } from './tag'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { formatDate } from '@/lib/utils'
+import { Badge } from '@/components/ui/badge'
 import React from 'react'
 import Image from 'next/image'
 
@@ -54,7 +53,13 @@ export function PostItem({ post }: PostItemProps) {
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mt-3'>
             {tags.map((tag) => (
-              <Tag key={tag} tag={tag} />
+              <Badge
+                key={tag}
+                variant='secondary'
+                className='text-xs font-normal'
+              >
+                {tag}
+              </Badge>
             ))}
           </div>
         )}
