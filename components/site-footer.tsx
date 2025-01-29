@@ -7,8 +7,8 @@ import { AllSocials } from '@/components/all-socials'
 
 export function BlogFooter() {
   return (
-    <footer className='border-t'>
-      <div className='container flex mx-auto px-2 py-12'>
+    <footer className='border-t border-primary/20'>
+      <div className='container flex mx-auto px-2 py-6'>
         <div className='grid grid-cols-1 md:grid-cols-12 gap-8'>
           {/* About Section - Full width on mobile, half on md, 7 cols on lg */}
           <div className='md:col-span-12 lg:col-span-7 lg:pr-10'>
@@ -85,13 +85,11 @@ export function BlogFooter() {
       </div>
 
       {/* Bottom Bar */}
-      <div className='border-t'>
-        <div className='container max-w-6xl py-6 px-4 flex justify-center'>
-          <div className='flex flex-col sm:flex-row items-center gap-2 text-sm text-muted-foreground'>
-            <p>© 2025 {siteConfig.name}</p>
-            <span className='hidden sm:inline'>•</span>
-            <p>Made with ♥ by ayazhankad</p>
-          </div>
+      <div className='container max-w-6xl py-4 px-4 flex justify-center border-t border-primary/20'>
+        <div className='flex flex-col sm:flex-row items-center gap-2 text-sm text-muted-foreground'>
+          <p>© 2025 {siteConfig.name}</p>
+          <span className='hidden sm:inline'>•</span>
+          <p>Made with ♥ by ayazhankad</p>
         </div>
       </div>
     </footer>

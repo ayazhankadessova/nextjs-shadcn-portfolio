@@ -21,14 +21,11 @@ export default function RootLayout({
   return (
     <html lang='en' className={`scroll-smooth`}>
       <body
-        className={
-          (cn('min-h-screen bg-background font-mono antialiased'),
-          inter.variable)
-        }
+        className={(cn('min-h-screen font-mono antialiased'), inter.variable)}
       >
         <Providers>
-          <div className='relative flex min-h-dvh flex-col bg-background px-4'>
-            <SiteHeader />
+          <SiteHeader />
+          <div className='relative flex min-h-dvh flex-col px-4'>
             <main className='flex-1'>{children}</main>
             <BlogFooter />
           </div>

@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --bg-start: 0 0% 100%; /* white */
+    --bg-end: 166 76% 87%; /* teal-200 */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -32,6 +34,8 @@
   }
 
   .dark {
+    --bg-start: 222.2 84% 4.9%;
+    --bg-end: 166 76% 20%; /* darker teal for dark mode */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -63,7 +67,13 @@
   * {
     @apply border-border;
   }
+  
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground bg-cover bg-center bg-no-repeat relative;
+    background-image: url('/backgrounds/light-bg-1.jpg');
+  }
+  
+  .dark body {
+    background-image: url('/backgrounds/dark-bg-2.jpg');
   }
 }
