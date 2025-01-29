@@ -1,29 +1,40 @@
-### About
+# Getting Started
 
-This `NextJS` project is an attempt to clone [`GitRoll-blog`](https://gitroll.io/blog), bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), using `TailwindCSS`, `MDX`, `Contentlayer`, and `shadcn/ui` + `lucide-react` components.
+Follow these steps to set up the project locally on your machine.
 
-## Getting Started
+**Requirements**
 
-1. Install dependencies:
+Ensure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en) (recommended version: v20)
+- [npm](https://npm.io/) (recommended to install via Corepack)
+
+**Setting up the Repository**
 
 ```bash
-pnpm install
+npx create-next-app -e https://github.com/ayazhankadessova/nextjs-shadcn-portfolio.git
+cd nextjs-shadcn-portfolio
 ```
 
-2. Run the development server:
+**Configuring the Project**
+
+1. Change the configuration data:
+
+- `@/app/config/site.ts`
+
+2. Update the template with your data, you can run the app.
+
+- `@/data/contact.ts`
+- `@/data/experience.ts`
+- `@/data/hobbies.ts`
+- `@/data/projects.ts`
+- `@/data/skills.ts`
+
+**Running the Project**
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-- [x] fix experiences page
-- [x] fix projects page
-# fix about page
-# add projects (make sure info is up to date)
-# check dark mode
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
