@@ -7,7 +7,7 @@ export default function AboutPage() {
     <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
       {/* Introduction */}
       <section className='mb-16'>
-        <h1 className='text-4xl font-bold mb-8'>About Me</h1>
+        <h1 className='text-2xl font-semibold mb-8'>A B O U T</h1>
         <div className='space-y-6 text-muted-foreground'>
           <p className='space-y-4 leading-relaxed'>
             I am a developer with a passion for creating intuitive and engaging
@@ -61,7 +61,7 @@ export default function AboutPage() {
       </section>
 
       <section className='mb-16'>
-        <h2 className='text-2xl font-bold mb-6'>Technologies</h2>
+        <h2 className='text-lg font-bold mb-6'>T E C H N O L O G I E S</h2>
         <div className='space-y-6'>
           {skillGroups.map((group, index) => (
             <div key={group.id}>
@@ -84,7 +84,7 @@ export default function AboutPage() {
 
       {/* Social Impact Section */}
       <section>
-        <h2 className='text-2xl font-bold mb-6'>Activities</h2>
+        <h2 className='text-lg font-bold mb-6'>A C T I V I T I E S</h2>
         <div className='space-y-6'>
           {socialImpact.map((item, index) => (
             <div key={index} className='space-y-2'>

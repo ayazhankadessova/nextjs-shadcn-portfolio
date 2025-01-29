@@ -53,8 +53,8 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <div className='container max-w-4xl mx-auto px-8 py-16'>
       <div className='flex justify-between items-center mb-8'>
-        <h1 className='text-3xl font-bold'>Blog</h1>
-        <div className='flex gap-4'>
+        <h1 className='text-xl font-semibold mb-8'>B L O G</h1>
+        <div className='flex gap-4 mb-8'>
           <Input
             type='text'
             placeholder='Search'

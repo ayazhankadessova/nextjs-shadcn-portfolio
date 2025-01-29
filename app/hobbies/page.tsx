@@ -5,10 +5,10 @@ import Image from 'next/image'
 export default function HobbiesPage() {
   return (
     <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
-      <h1 className='text-3xl font-bold mb-8'>Hobbies</h1>
+      <h1 className='text-xl font-semibold mb-8'>H O B B I E S</h1>
       {hobbies.map((hobby) => (
         <section key={hobby.id} className={'mb-16'}>
-          <h2 className='text-2xl font-semibold mb-6'>{hobby.title}</h2>
+          <h2 className='text-2xl font-medium mb-6'>{hobby.title}</h2>
           <div>
             <p className='mb-6'>{hobby.content}</p>
 

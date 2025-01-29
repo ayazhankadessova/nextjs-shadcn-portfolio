@@ -38,7 +38,7 @@ export function PostItem({ post }: PostItemProps) {
         </div>
 
         <Link href={'/' + slug} className='block group'>
-          <h2 className='text-lg font-bold tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
+          <h2 className='text-lg font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
             {title}
             <span className='font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
               ↗

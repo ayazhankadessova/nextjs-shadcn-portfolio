@@ -9,7 +9,7 @@ import { Providers } from '@/components/providers'
 const inter = Inter({ subsets: ['latin'], variable: '--font-mono' })
 
 export const metadata: Metadata = {
-  title: 'AyazhanKad | Blog',
+  title: 'AyazhanKad',
   description: 'Read articles by AyazhanKad',
 }
 

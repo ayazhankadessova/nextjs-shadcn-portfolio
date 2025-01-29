@@ -8,7 +8,7 @@ import { projects } from '@/data/projects'
 export default function ProjectsPage() {
   return (
     <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
-      <h1 className='text-2xl font-bold mb-8'>Projects</h1>
+      <h1 className='text-xl font-semibold mb-8'>P R O J E C T S</h1>
       <div className='space-y-16'>
         {projects.map((project, index) => (
           <div
