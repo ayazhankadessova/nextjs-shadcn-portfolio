@@ -4,14 +4,14 @@ import { experiences } from '@/data/experience'
 
 export default function Experience() {
   return (
-    <div className='container max-w-4xl mx-auto px-4 sm:px-8 py-16'>
+    <div className='container max-w-4xl mx-auto sm:px-2 md:px-8 py-16'>
       <h1 className='text-3xl font-bold mb-8'>Experience</h1>
 
       <div className='space-y-12'>
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className='grid grid-cols-1 sm:grid-cols-[240px_1fr] gap-2 sm:gap-8 '
+            className='grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-4 sm:gap-6 md:gap-8'
           >
             {/* Date Section */}
             <div className='text-sm text-muted-foreground font-medium'>
