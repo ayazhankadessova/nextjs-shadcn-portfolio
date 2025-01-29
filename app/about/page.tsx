@@ -4,7 +4,7 @@ import { skillGroups, socialImpact } from '@/data/skills'
 
 export default function AboutPage() {
   return (
-    <div className='container max-w-4xl mx-auto px-8 py-16'>
+    <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
       {/* Introduction */}
       <section className='mb-16'>
         <h1 className='text-4xl font-bold mb-8'>About Me</h1>
@@ -20,7 +20,8 @@ export default function AboutPage() {
             >
               PythonBit
             </a>
-            , web platform to help students gain confidence in Python via real-time classrooms, tutorials, and fun projects.
+            , web platform to help students gain confidence in Python via
+            real-time classrooms, tutorials, and fun projects.
           </p>
           <p>
             As a senior pursuing a{' '}

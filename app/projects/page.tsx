@@ -7,8 +7,8 @@ import { projects } from '@/data/projects'
 
 export default function ProjectsPage() {
   return (
-    <div className='container max-w-4xl mx-auto sm:px-2 md:px-8 py-16'>
-      <h1 className='text-3xl font-bold mb-8'>Projects</h1>
+    <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
+      <h1 className='text-2xl font-bold mb-8'>Projects</h1>
       <div className='space-y-16'>
         {projects.map((project, index) => (
           <div
@@ -17,7 +17,7 @@ export default function ProjectsPage() {
           >
             {/* Content Section */}
             <div className='sm:order-2'>
-              <h3 className='text-lg font-bold tracking-tight'>
+              <h3 className='text-lg font-medium tracking-tight'>
                 {project.title}
               </h3>
               <p className='text-sm text-muted-foreground mt-1 mb-4'>
@@ -67,14 +67,14 @@ export default function ProjectsPage() {
 
             {/* Image Section */}
             <div className='w-1/2 mx-auto sm:w-full sm:order-1'>
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={400}
-                  height={300}
-                  className='rounded-lg hover:border hover:border-solid hover:border-primary'
-                  sizes='(max-width: 640px) 66vw, 25vw'
-                />
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={400}
+                height={300}
+                className='rounded-lg hover:border hover:border-solid hover:border-primary'
+                sizes='(max-width: 640px) 66vw, 25vw'
+              />
             </div>
           </div>
         ))}

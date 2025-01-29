@@ -4,7 +4,7 @@ import { AllSocials } from '@/components/all-socials'
 
 export default function Hero() {
   return (
-    <div className='container max-w-4xl mx-auto py-32'>
+    <div className='container max-w-4xl mx-auto py-32 px-2 md:px-4 py-16'>
       <div className='flex items-start'>
         {/* Main content */}
         <div className='flex-1'>

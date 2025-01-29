@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function HobbiesPage() {
   return (
-    <div className='container max-w-4xl mx-auto px-8 py-16'>
+    <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
       <h1 className='text-3xl font-bold mb-8'>Hobbies</h1>
       {hobbies.map((hobby) => (
         <section key={hobby.id} className={'mb-16'}>
@@ -19,6 +19,8 @@ export default function HobbiesPage() {
                     key={index}
                     src={image.src}
                     alt={image.alt}
+                    width={400}
+                    height={300}
                     className={image.className}
                   />
                 ))}
@@ -30,6 +32,8 @@ export default function HobbiesPage() {
                     key={index}
                     src={image.src}
                     alt={image.alt}
+                    width={400}
+                    height={300}
                     className={image.className}
                   />
                 ))}
