@@ -1,5 +1,6 @@
 import React from 'react'
 import { hobbies } from '@/data/hobbies'
+import Image from 'next/image'
 
 export default function HobbiesPage() {
   return (
@@ -14,7 +15,7 @@ export default function HobbiesPage() {
             {hobby.images && hobby.additionalContent?.type === 'grid' ? (
               <div className={hobby.additionalContent.className}>
                 {hobby.images.map((image, index) => (
-                  <img
+                  <Image
                     key={index}
                     src={image.src}
                     alt={image.alt}
@@ -25,7 +26,7 @@ export default function HobbiesPage() {
             ) : hobby.images ? (
               <div className='my-8'>
                 {hobby.images.map((image, index) => (
-                  <img
+                  <Image
                     key={index}
                     src={image.src}
                     alt={image.alt}
