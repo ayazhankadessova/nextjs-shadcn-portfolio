@@ -8,10 +8,10 @@ import { AllSocials } from '@/components/all-socials'
 export function BlogFooter() {
   return (
     <footer className='border-t'>
-      <div className='container max-w-6xl py-12 px-8'>
+      <div className='container flex mx-auto px-2 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-12 gap-8'>
-          {/* About Section - 6 columns */}
-          <div className='flex flex-col md:col-span-7 pr-10'>
+          {/* About Section - Full width on mobile, half on md, 7 cols on lg */}
+          <div className='md:col-span-12 lg:col-span-7 lg:pr-10'>
             <Link href='/' className='text-lg font-semibold mb-4 block'>
               {siteConfig.name}
             </Link>
@@ -22,12 +22,12 @@ export function BlogFooter() {
               careful attention to detail and user-centered development, I craft
               solutions that make a lasting impact.
             </p>
-            <AllSocials/>
+            <AllSocials />
           </div>
 
-          {/* Navigation - 3 columns */}
-          <div className='flex flex-col md:col-span-1'>
-            <div className='flex justify-center'>
+          {/* Navigation - Full width on mobile, half on md with Contact, 1 col on lg */}
+          <div className='md:col-span-6 lg:col-span-1'>
+            <div>
               <div>
                 <h3 className='font-medium mb-4'>Navigation</h3>
                 <ul className='space-y-2 text-sm'>
@@ -46,8 +46,8 @@ export function BlogFooter() {
             </div>
           </div>
 
-          {/* Contact & Contribute - 3 columns */}
-          <div className='flex flex-col md:col-span-4 pl-10'>
+          {/* Contact & Contribute - Full width on mobile, half on md, 4 cols on lg */}
+          <div className='md:col-span-6 lg:col-span-4 lg:pl-10'>
             <div className='w-full'>
               <h3 className='font-medium mb-5'>Get in Touch</h3>
               <ul className='space-y-2 text-sm'>
@@ -86,10 +86,10 @@ export function BlogFooter() {
 
       {/* Bottom Bar */}
       <div className='border-t'>
-        <div className='container max-w-6xl py-6 flex justify-center'>
-          <div className='flex items-center gap-2 text-sm text-muted-foreground'>
+        <div className='container max-w-6xl py-6 px-4 flex justify-center'>
+          <div className='flex flex-col sm:flex-row items-center gap-2 text-sm text-muted-foreground'>
             <p>© 2025 {siteConfig.name}</p>
-            <span>•</span>
+            <span className='hidden sm:inline'>•</span>
             <p>Made with ♥ by ayazhankad</p>
           </div>
         </div>
