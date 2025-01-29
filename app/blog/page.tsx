@@ -60,10 +60,10 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
             placeholder='Search'
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
-            className='w-full sm:w-[200px]'
+            className='w-3/4 sm:w-[200px]'
           />
           <Select onValueChange={setSortMethod}>
-            <SelectTrigger className='w-full sm:w-[140px]'>
+            <SelectTrigger className='w-3/4 sm:w-[140px]'>
               <SelectValue placeholder='Sort By' />
             </SelectTrigger>
             <SelectContent>
