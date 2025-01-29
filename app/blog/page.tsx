@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState } from 'react'
 import { posts } from '#site/content'
 import { PostItem } from '@/components/post-item'
@@ -45,25 +44,26 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
   const currentPage = Number(searchParams?.page) || 1
   const currentPerPage = Number(searchParams?.perPage) || 5
   const totalPages = Math.ceil(publishedPosts.length / currentPerPage)
+
   const displayPosts = sortedPosts.slice(
     currentPerPage * (currentPage - 1),
     currentPerPage * currentPage
   )
 
   return (
-    <div className='container max-w-4xl mx-auto px-8 py-16'>
-      <div className='flex justify-between items-center mb-8'>
-        <h1 className='text-xl font-semibold mb-8'>B L O G</h1>
-        <div className='flex gap-4 mb-8'>
+    <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
+      <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8'>
+        <h1 className='text-xl font-semibold'>B L O G</h1>
+        <div className='flex flex-col sm:flex-row gap-4'>
           <Input
             type='text'
             placeholder='Search'
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
-            className='w-[200px]'
+            className='w-full sm:w-[200px]'
           />
           <Select onValueChange={setSortMethod}>
-            <SelectTrigger className='w-[140px]'>
+            <SelectTrigger className='w-full sm:w-[140px]'>
               <SelectValue placeholder='Sort By' />
             </SelectTrigger>
             <SelectContent>
