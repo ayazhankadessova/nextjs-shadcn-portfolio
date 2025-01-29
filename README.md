@@ -85,7 +85,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## <a name="credits">🙏Credits</a>
 
-This design/alignments for this projects were inspired by:
+This design/alignments for this project were inspired by:
 
 - [fuma-nama.vercel.app](https://fuma-nama.vercel.app/)
 - [gitroll.io](https://gitroll.io)
