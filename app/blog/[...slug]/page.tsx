@@ -1,7 +1,7 @@
 import { posts } from '#site/content'
 import { notFound } from 'next/navigation'
-import { MDXContent } from '@/components/mdx-components'
-import { SharePost } from '@/components/share-post'
+import { MDXContent } from '@/components/blog/mdx-components'
+import { SharePost } from '@/components/blog/share-post'
 import { siteConfig } from '@/config/site'
 import BackButton from '@/components/backbutton'
 

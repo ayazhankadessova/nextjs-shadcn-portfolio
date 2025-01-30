@@ -9,8 +9,8 @@ import {
   NavigationMenuTrigger,
   NavigationMenuContent,
 } from '@/components/ui/navigation-menu'
-import { ThemeToggle } from './theme-toggle'
-import MobileNav from './mobile-nav'
+import { ThemeToggle } from '@/components/layout/theme-toggle'
+import MobileNav from '@/components/layout/mobile-nav'
 import { siteConfig } from '@/config/site'
 import headerNavLinks from '@/config/headerNavLinks'
 import { cn } from '@/lib/utils'

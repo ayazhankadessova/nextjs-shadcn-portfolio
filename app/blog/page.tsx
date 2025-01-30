@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { posts } from '#site/content'
-import { PostItem } from '@/components/post-item'
+import { PostItem } from '@/components/blog/post-item'
 import {
   sortPosts,
   filterPostsBySearchTerm,

@@ -1,19 +1,19 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import {
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from 'body-scroll-lock'
 
-import { Button } from './ui/button'
+import { Button } from '@/components/ui/button'
 import { Menu } from 'lucide-react'
 import Link, { LinkProps } from 'next/link'
 import { useRouter } from 'next/navigation'
 import { siteConfig } from '@/config/site'
 import headerNavLinks from '@/config/headerNavLinks'
-import { ThemeToggle } from './theme-toggle'
+import { ThemeToggle } from '@/components/layout/theme-toggle'
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false)
