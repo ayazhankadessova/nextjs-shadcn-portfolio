@@ -18,6 +18,7 @@ export function BackgroundImage() {
         alt='background'
         quality={100}
         fill
+        placeholder='blur'
         sizes='100vw'
         className='object-cover opacity-40 transition-opacity duration-300'
         priority
