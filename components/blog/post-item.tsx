@@ -41,7 +41,6 @@ export function PostItem({ post }: PostItemProps) {
             {tags.map((tag) => (
               <Badge
                 key={tag}
-                variant='secondary'
                 className='text-xs font-normal'
               >
                 {tag}

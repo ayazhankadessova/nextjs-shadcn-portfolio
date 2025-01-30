@@ -49,7 +49,6 @@ export default function Experience() {
                     {project.tech.map((tech, tIndex) => (
                       <Badge
                         key={tIndex}
-                        variant='secondary'
                         className='text-xs font-normal'
                       >
                         {tech}

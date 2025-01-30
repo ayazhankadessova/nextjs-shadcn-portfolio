@@ -70,7 +70,7 @@ export default function AboutPage() {
                 {group.skills.map((tech) => (
                   <Badge
                     key={tech}
-                    variant='secondary'
+                    // variant='outline'
                     className='text-xs font-normal'
                   >
                     {tech}
@@ -91,7 +91,13 @@ export default function AboutPage() {
               <h3 className='text-lg font-medium tracking-tight'>
                 {item.title} • {item.organization}
               </h3>
-              <p className='text-muted-foreground'>{item.description}</p>
+              <ul className='space-y-2'>
+                {item.achievements.map((achievement, aIndex) => (
+                  <li key={aIndex} className='text-sm text-muted-foreground'>
+                    - {achievement}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
