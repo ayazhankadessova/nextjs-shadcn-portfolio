@@ -8,6 +8,7 @@ export type Experience = {
     tech: string[]
     achievements: string[]
   }>
+  link?: string
 }
 
 export type Project = {

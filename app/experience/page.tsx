@@ -1,6 +1,7 @@
 import React from 'react'
 import { Badge } from '@/components/ui/badge'
 import { experiences } from '@/data/experience'
+import Link from 'next/link'
 
 export default function Experience() {
   return (
@@ -20,9 +21,21 @@ export default function Experience() {
 
             {/* Content Section */}
             <div>
-              <h3 className='text-lg font-medium tracking-tight'>
-                {exp.position} • {exp.company}
-              </h3>
+              {exp.link ? (
+                <Link href={exp.link} className='block group'>
+                  <h3 className='text-lg font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
+                    {exp.position} • {exp.company}
+                    <span className='font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
+                      ↗
+                    </span>
+                  </h3>
+                </Link>
+              ) : (
+                <h3 className='text-lg font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
+                  {exp.position} • {exp.company}
+                </h3>
+              )}
+
               {/* Projects */}
               {exp.projects.map((project, pIndex) => (
                 <div key={pIndex} className={pIndex === 0 ? 'mt-4' : 'mt-5'}>
@@ -47,10 +60,7 @@ export default function Experience() {
                   {/* Technologies */}
                   <div className='flex flex-wrap gap-2'>
                     {project.tech.map((tech, tIndex) => (
-                      <Badge
-                        key={tIndex}
-                        className='text-xs font-normal'
-                      >
+                      <Badge key={tIndex} className='text-xs font-normal'>
                         {tech}
                       </Badge>
                     ))}

@@ -3,6 +3,7 @@ import { Experience } from '@/types/data'
 export const experiences: Experience[] = [
   {
     company: 'GitRoll',
+    link: 'https://gitroll.io',
     location: 'California, USA',
     position: 'Full Stack Developer Intern',
     period: 'Sep. 2024 - Dec. 2024',
@@ -19,6 +20,7 @@ export const experiences: Experience[] = [
   },
   {
     company: 'J.P.Morgan Chase & Co.',
+    link: 'https://www.jpmorganchase.com',
     location: 'Kowloon, Hong Kong',
     position: 'Frontend Developer Intern',
     period: 'Jun. 2024 – Aug. 2024',
@@ -34,9 +36,9 @@ export const experiences: Experience[] = [
   },
   {
     company: 'J.P.Morgan Chase & Co.',
+    link: 'https://www.jpmorganchase.com',
     location: 'Kowloon, Hong Kong',
-    position:
-      'Software Engineering Intern',
+    position: 'Software Engineering Intern',
     period: 'Jun. 2023 – Aug. 2023',
     projects: [
       {
@@ -57,6 +59,7 @@ export const experiences: Experience[] = [
   },
   {
     company: 'Super Cat Technology Limited',
+    link: 'https://www.linkedin.com/company/super-chain/people/?facetNetwork=F',
     location: 'Kowloon, Hong Kong',
     position: 'Software Engineering Intern',
     period: 'Jun. 2022 - Sep. 2022',
