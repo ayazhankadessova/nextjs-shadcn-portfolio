@@ -69,11 +69,6 @@
   }
   
   body {
-    @apply text-foreground bg-cover bg-center bg-no-repeat relative;
-    background-image: url('/backgrounds/light-bg-1.jpg');
-  }
-  
-  .dark body {
-    background-image: url('/backgrounds/dark-bg-2.jpg');
+    @apply text-foreground;
   }
 }
