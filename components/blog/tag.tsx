@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { badgeVariants } from './ui/badge'
+import { badgeVariants } from '@/components//ui/badge'
 import React from 'react'
 // import { slug } from 'github-slugger'
 
