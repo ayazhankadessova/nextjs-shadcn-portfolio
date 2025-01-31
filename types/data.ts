@@ -21,22 +21,35 @@ export type Project = {
   demo: string
 }
 
-export type HobbyImage = {
+export interface Image {
   src: string
   alt: string
   className?: string
   width?: number
   height?: number
+  priority?: boolean
 }
 
-export type Hobby = {
+export interface HighlightContent {
+  type: 'highlight'
+  variant: 'link' | 'info' | 'featured' | 'warning' | 'quote'
+  content: string
+  href?: string
+  icon?: string
+}
+
+export interface GridContent {
+  type: 'grid'
+  className: string
+}
+
+export type AdditionalContent = HighlightContent | GridContent
+
+
+export interface Hobby {
   id: string
   title: string
   content: string
-  images?: HobbyImage[]
-  additionalContent?: {
-    type: 'highlight' | 'grid' | 'single'
-    content?: string
-    className?: string
-  }
+  images?: Image[]
+  additionalContent?: AdditionalContent
 }
