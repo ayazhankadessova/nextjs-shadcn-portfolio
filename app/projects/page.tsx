@@ -1,9 +1,17 @@
 import React from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Github, ExternalLink } from 'lucide-react'
+import { Github, ExternalLink, X, Maximize2 } from 'lucide-react'
 import Image from 'next/image'
 import { projects } from '@/data/projects'
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogTrigger,
+  AlertDialogCancel,
+  AlertDialogHeader,
+  AlertDialogFooter,
+} from '@/components/ui/alert-dialog'
 
 export default function ProjectsPage() {
   return (
@@ -36,10 +44,7 @@ export default function ProjectsPage() {
               </ul>
               <div className='flex flex-wrap gap-2 mb-4'>
                 {project.tech.map((tech) => (
-                  <Badge
-                    key={tech}
-                    className='text-xs font-normal'
-                  >
+                  <Badge key={tech} className='text-xs font-normal'>
                     {tech}
                   </Badge>
                 ))}
@@ -65,7 +70,7 @@ export default function ProjectsPage() {
             </div>
 
             {/* Image Section */}
-            <div className='w-1/2 mx-auto sm:w-full sm:order-1'>
+            {/* <div className='w-1/2 mx-auto sm:w-full sm:order-1'>
               <Image
                 src={project.image}
                 alt={project.title}
@@ -74,6 +79,49 @@ export default function ProjectsPage() {
                 className='rounded-lg hover:border hover:border-solid hover:border-primary'
                 sizes='(max-width: 640px) 66vw, 25vw'
               />
+            </div> */}
+
+            <div className='w-2/3 mx-auto sm:w-full sm:order-1'>
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <div className='cursor-pointer transition-transform hover:scale-105 relative group'>
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={400}
+                      height={300}
+                      className='rounded-lg hover:border hover:border-solid hover:border-primary w-full h-auto'
+                      sizes='(max-width: 640px) 90vw, 33vw'
+                    />
+                    <div className='absolute bottom-4 right-4 opacity-80 group-hover:opacity-100 transition-opacity'>
+                      <div className='bg-primary/50 p-2 rounded-full'>
+                        <Maximize2 className='w-4 h-4 text-primary-foreground' />
+                      </div>
+                    </div>
+                  </div>
+                </AlertDialogTrigger>
+                <AlertDialogContent className='sm:max-w-[6vw] md:max-w-[70vw] lg:max-w-[50vw]'>
+                  <AlertDialogHeader className='p-0'>
+                    <div className='relative'>
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={800}
+                        height={600}
+                        className='w-full h-auto rounded-lg'
+                      />
+                      <AlertDialogCancel className='absolute top-4 right-4 rounded-full w-12 h-12 p-0 bg-secondary hover:bg-secondary/80 border-2 border-primary'>
+                        <X className='h-6 w-6 text-primary' />
+                      </AlertDialogCancel>
+                    </div>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter className='sm:justify-center'>
+                    <p className='text-sm text-muted-foreground'>
+                      {project.title}
+                    </p>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
           </div>
         ))}
