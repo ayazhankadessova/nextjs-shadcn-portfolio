@@ -40,4 +40,17 @@ export const projects: Project[] = [
     github: 'https://github.com/ayazhankadessova/m5stick-iot-mobile',
     demo: 'https://www.youtube.com/watch?v=uHNZBZxneeY',
   },
+  {
+    title: 'FAFA, cargo transportation business model',
+    description: 'Open Source Data Analysis Project',
+    image: '/projects/project-4.png',
+    tech: ['Python', 'Beautiful Soup', 'Web Scraping', 'Data Science'],
+    points: [
+      'Developed an open-source project involving web scraping of cargo transportation data from websites in Kazakhstan and the CIS.',
+      'Conducted data analysis and authored a comprehensive post to suggest top three profitable business models, considering route, truck type, products.',
+    ],
+    github:
+      'https://github.com/ayazhankadessova/Portfolio-Projects/tree/main/FAFA',
+    demo: 'https://ayazhankad-coding.blogspot.com/2021/09/scraping-fafakz-for-almaty-delivery.html',
+  },
 ]
