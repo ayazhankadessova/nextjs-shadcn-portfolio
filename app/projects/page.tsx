@@ -38,7 +38,6 @@ export default function ProjectsPage() {
                 {project.tech.map((tech) => (
                   <Badge
                     key={tech}
-                    variant='secondary'
                     className='text-xs font-normal'
                   >
                     {tech}
