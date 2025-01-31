@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: 'HKBU Event Manager',
     description:
       'Android mobile app for HKBU volunteers to efficiently manage event registration',
-    image: '/real-time.png',
+    image: '/senior-connect.png',
     tech: ['Kotlin', 'Jetpack Compose', 'Android Studio'],
     points: [
       'Built a user-friendly Android mobile app connecting to backend API',
