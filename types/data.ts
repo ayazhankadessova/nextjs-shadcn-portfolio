@@ -28,6 +28,7 @@ export interface Image {
   width?: number
   height?: number
   priority?: boolean
+  title?: string
 }
 
 export interface HighlightContent {
@@ -52,4 +53,5 @@ export interface Hobby {
   content: string
   images?: Image[]
   additionalContent?: AdditionalContent
+  // title?: string
 }

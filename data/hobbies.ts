@@ -32,10 +32,13 @@ export const hobbies: Hobby[] = [
         src: '/projects/project-1.png',
         alt: 'Skiing in Oskemen',
         className: 'rounded-lg',
-        width: 200,
-        height: 200,
+        title: 'Skiing in Oskemen',
       },
     ],
+    additionalContent: {
+      type: 'grid',
+      className: 'flex flex-row justify-center',
+    },
   },
   {
     id: 'youtube',
@@ -54,25 +57,11 @@ export const hobbies: Hobby[] = [
     title: 'Learning & Growth',
     content:
       'Im always diving into books and podcasts about public policy and social issues. Invisible Women by Caroline Criado Perez particularly opened my eyes to how design and data can overlook half our population.',
-    images: [
-      {
-        src: '/projects/project-2.png',
-        alt: 'Reading corner',
-        className: 'rounded-lg',
-        width: 200,
-        height: 200,
-      },
-      {
-        src: '/projects/project-3.png',
-        alt: 'Podcast setup',
-        className: 'rounded-lg',
-        width: 200,
-        height: 200,
-      },
-    ],
     additionalContent: {
-      type: 'grid',
-      className: 'flex flex-row justify-center gap-2 my-8',
+      type: 'highlight',
+      variant: 'link',
+      content: 'My GoodReads Account',
+      href: 'https://www.goodreads.com/user/show/145274056-ayazhan',
     },
   },
   {
@@ -87,11 +76,26 @@ export const hobbies: Hobby[] = [
         className: 'rounded-lg',
       },
     ],
+    additionalContent: {
+      type: 'grid',
+      className: 'flex flex-row justify-center',
+    },
   },
   {
     id: 'quiet',
     title: 'Quiet Moments',
     content:
       'Some of my most cherished times are spent journalling, finding new coffee spots where I can sit, reflect, and just be.',
+    images: [
+      {
+        src: '/projects/project-4.png',
+        alt: 'Hackathon team',
+        className: 'rounded-lg',
+      },
+    ],
+    additionalContent: {
+      type: 'grid',
+      className: 'flex flex-row justify-center',
+    },
   },
 ]

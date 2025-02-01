@@ -1,53 +1,45 @@
-// HobbiesPage.tsx
 import React from 'react'
 import { hobbies } from '@/data/hobbies'
 import Image from 'next/image'
 import { Highlight } from '@/components/ui/highlight'
-import { cn } from '@/lib/utils'
 
 export default function HobbiesPage() {
   return (
     <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
       <h1 className='text-xl font-semibold mb-8'>H O B B I E S</h1>
       {hobbies.map((hobby) => (
-        <section key={hobby.id} className='mb-16'>
-          <h2 className='text-2xl font-medium mb-6'>{hobby.title}</h2>
+        <section key={hobby.id} className='mb-14'>
+          <h2 className='text-2xl font-medium mb-5'>{hobby.title}</h2>
           <div>
             <p className='mb-6'>{hobby.content}</p>
 
-            {hobby.images && hobby.additionalContent?.type === 'grid' ? (
+            {hobby.images && (
               <div
                 className={
-                  hobby.additionalContent.className // grid styles from data
+                  hobby.additionalContent?.type === 'grid'
+                    ? hobby.additionalContent.className
+                    : ''
                 }
               >
                 {hobby.images.map((image, index) => (
-                  <Image
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    width={image.width || 400}
-                    height={image.height || 300}
-                    className={image.className}
-                    priority={image.priority}
-                  />
+                  <div key={index} className='flex flex-col items-center'>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={image.width || 400}
+                      height={image.height || 300}
+                      className={image.className}
+                      priority={image.priority}
+                    />
+                    {image.title && (
+                      <p className='mt-2 text-sm italic text-muted-foreground'>
+                        {image.title}
+                      </p>
+                    )}
+                  </div>
                 ))}
               </div>
-            ) : hobby.images ? (
-              <div className='my-8'>
-                {hobby.images.map((image, index) => (
-                  <Image
-                    key={index}
-                    src={image.src}
-                    alt={image.alt}
-                    width={image.width || 400}
-                    height={image.height || 300}
-                    className={image.className}
-                    priority={image.priority}
-                  />
-                ))}
-              </div>
-            ) : null}
+            )}
 
             {hobby.additionalContent?.type === 'highlight' && (
               <Highlight
