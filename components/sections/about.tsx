@@ -5,9 +5,8 @@ import { skillGroups, socialImpact } from '@/data/skills'
 
 export default function AboutPage() {
   return (
-    <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
-      {/* Introduction */}
-      <section className='mb-16'>
+    <>
+      <section className='mb-16' id='about'>
         <h1 className='text-2xl font-semibold mb-8'>A B O U T</h1>
         <div className='space-y-6 text-muted-foreground'>
           <p className='space-y-4 leading-relaxed'>
@@ -83,8 +82,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Social Impact Section */}
-      <section>
+      <section className='mb-16'>
         <h2 className='text-lg font-bold mb-6'>A C T I V I T I E S</h2>
         <div className='space-y-6'>
           {socialImpact.map((item, index) => (
@@ -103,6 +101,6 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
-    </div>
+    </>
   )
 }

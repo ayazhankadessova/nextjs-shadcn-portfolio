@@ -3,17 +3,17 @@ import {DialogsInfo} from "@/types/app"
 const dialogsInfo: DialogsInfo = {
   About: {
     title: 'About',
-    href: '/about',
+    href: '#about',
     toggle: false,
   },
   Experience: {
     title: 'Experience',
-    href: '/experience',
+    href: '#experience',
     toggle: false,
   },
   Projects: {
     title: 'Projects',
-    href: '/projects',
+    href: '#projects',
     toggle: false,
   },
   Blog: {

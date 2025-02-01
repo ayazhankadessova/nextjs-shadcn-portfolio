@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Github, Linkedin } from 'lucide-react'
 import {
@@ -16,16 +17,59 @@ import headerNavLinks from '@/config/headerNavLinks'
 import { cn } from '@/lib/utils'
 
 export function SiteHeader() {
+
+  const [activeSection, setActiveSection] = useState<string>('')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          console.log(entry.target.id)
+          if (entry.target.id === 'top') {
+              setActiveSection('')
+            } else {
+              setActiveSection(entry.target.id)
+            }
+        })
+      },
+      {
+        rootMargin: '-80px 0px -80% 0px', // Adjusts when section is considered "active"
+      }
+    )
+
+    // Observe all sections
+    document.querySelectorAll('section[id]').forEach((section) => {
+      observer.observe(section)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+  
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault()
+    const element = document.querySelector(href)
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset
+      window.scrollTo({
+        top: offsetTop - 80, // Adjust for header height
+        behavior: 'smooth',
+      })
+    }
+  }
   return (
     <header className='sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 pl-6 pr-4'>
       <div className='container flex h-16 items-center justify-between px-0'>
         <div className='flex gap-6 items-center'>
-          <Link
-            href='/'
+          <a
+            href='#top'
+            onClick={(e) => scrollToSection(e, '#top')}
             className='text-lg font-semibold bg-gradient-to-r from-purple-600 to-green-500 bg-clip-text text-transparent'
           >
             {siteConfig.name}
-          </Link>
+          </a>
 
           <NavigationMenu className='hidden md:flex'>
             <NavigationMenuList className='gap-6'>
@@ -52,9 +96,19 @@ export function SiteHeader() {
                 ) : (
                   <NavigationMenuItem key={dialog.title}>
                     <Link href={dialog.href} legacyBehavior passHref>
-                      <NavigationMenuLink className='text-sm font-medium hover:text-purple-500 transition-colors'>
+                      <a
+                        href={dialog.href}
+                        onClick={(e) => scrollToSection(e, dialog.href)}
+                        className={cn(
+                          'text-sm font-medium transition-colors relative',
+                          activeSection === dialog.href.slice(1)
+                            ? 'text-purple-500 after:content-[""] after:block after:h-0.5 after:bg-purple-500 after:absolute after:-bottom-1 after:left-0 after:right-0'
+                            : 'hover:text-purple-500'
+                        )}
+                        // className='text-sm font-medium hover:text-purple-500 transition-colors'
+                      >
                         {dialog.title}
-                      </NavigationMenuLink>
+                      </a>
                     </Link>
                   </NavigationMenuItem>
                 )

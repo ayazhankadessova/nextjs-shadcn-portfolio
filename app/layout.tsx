@@ -27,8 +27,10 @@ export default function RootLayout({
         <Providers>
           <SiteHeader />
           <BackgroundImage />
-          <div className='relative flex min-h-dvh flex-col px-4'>
+          <div className='relative flex min-h-dvh flex-col container max-w-4xl mx-auto px-6 md:px-8 py-16'>
             <main className='flex-1'>{children}</main>
+          </div>
+          <div className='relative flex flex-col px-4'>
             <BlogFooter />
           </div>
         </Providers>
