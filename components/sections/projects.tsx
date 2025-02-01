@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -12,8 +13,18 @@ import {
   AlertDialogHeader,
   AlertDialogFooter,
 } from '@/components/ui/alert-dialog'
+import Link from 'next/link'
 
-export default function ProjectsPage() {
+interface ProjectsPageProps {
+  variant?: 'short' | 'default'
+}
+
+export default function ProjectsPage({
+  variant = 'default',
+}: ProjectsPageProps) {
+  const displayedProjects =
+    variant === 'default' ? projects : projects.slice(0, 3)
+
   return (
     <section className='mb-16' id='projects'>
       {/* <h1 className='text-xl font-semibold mb-8'>P R O J E C T S</h1> */}
@@ -26,8 +37,8 @@ export default function ProjectsPage() {
           Projects
         </h2>
       </div> */}
-      <div className='space-y-16'>
-        {projects.map((project, index) => (
+      <div className='space-y-12'>
+        {displayedProjects.map((project, index) => (
           <div
             key={index}
             className='grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-4 sm:gap-6 md:gap-8'
@@ -78,18 +89,6 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            {/* Image Section */}
-            {/* <div className='w-1/2 mx-auto sm:w-full sm:order-1'>
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={400}
-                height={300}
-                className='rounded-lg hover:border hover:border-solid hover:border-primary'
-                sizes='(max-width: 640px) 66vw, 25vw'
-              />
-            </div> */}
-
             <div className='w-2/3 mx-auto sm:w-full sm:order-1'>
               <AlertDialog>
                 <AlertDialogTrigger asChild>
@@ -135,6 +134,17 @@ export default function ProjectsPage() {
           </div>
         ))}
       </div>
+
+      {variant === 'short' && (
+        <Link href={'/projects'} className='block group mt-8'>
+          <h3 className='text-md font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
+            View All Projects
+            <span className='font-semibold inline-block transition-transform duration-200 ease-out group-hover:translate-x-1'>
+              →
+            </span>
+          </h3>
+        </Link>
+      )}
     </section>
   )
 }

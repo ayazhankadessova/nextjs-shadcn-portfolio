@@ -2,8 +2,14 @@
 import React from 'react'
 import { Badge } from '@/components/ui/badge'
 import { skillGroups, socialImpact } from '@/data/skills'
+import Link from 'next/link'
+interface AboutPageProps {
+  variant?: 'short' | 'default'
+}
 
-export default function AboutPage() {
+export default function AboutPage({ variant = 'default' }: AboutPageProps) {
+  const displayedActivities =
+    variant === 'default' ? socialImpact : socialImpact.slice(0, 2)
   return (
     <>
       <section className='mb-16' id='about'>
@@ -85,7 +91,7 @@ export default function AboutPage() {
       <section className='mb-16'>
         <h2 className='text-lg font-bold mb-6'>A C T I V I T I E S</h2>
         <div className='space-y-6'>
-          {socialImpact.map((item, index) => (
+          {displayedActivities.map((item, index) => (
             <div key={index} className='space-y-2'>
               <h3 className='text-lg font-medium tracking-tight'>
                 {item.title} • {item.organization}
@@ -100,6 +106,17 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
+
+        {variant === 'short' && (
+          <Link href={'/about'} className='block group mt-8'>
+            <h3 className='text-lg font-medium italic tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
+              View All Activities
+              <span className='font-semibold inline-block transition-transform duration-200 ease-out group-hover:translate-x-1'>
+                →
+              </span>
+            </h3>
+          </Link>
+        )}
       </section>
     </>
   )

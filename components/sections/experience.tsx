@@ -3,13 +3,22 @@ import { Badge } from '@/components/ui/badge'
 import { experiences } from '@/data/experience'
 import Link from 'next/link'
 
-export default function Experience() {
+interface ExperiencePageProps {
+  variant?: 'short' | 'default'
+}
+
+export default function Experience({
+  variant = 'default',
+}: ExperiencePageProps) {
+  const displayedExperience =
+    variant === 'default' ? experiences : experiences.slice(0, 3)
+
   return (
     <section className='mb-16' id='experience'>
       <h1 className='text-xl font-semibold mb-8'>E X P E R I E N C E</h1>
 
       <div className='space-y-12'>
-        {experiences.map((exp, index) => (
+        {displayedExperience.map((exp, index) => (
           <div
             key={index}
             className='grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-4 sm:gap-6 md:gap-8'
@@ -71,6 +80,16 @@ export default function Experience() {
           </div>
         ))}
       </div>
+      {variant === 'short' && (
+        <Link href={'/experience'} className='block group mt-8'>
+          <h3 className='text-md font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
+            View Full Experience & Resume
+            <span className='font-semibold inline-block transition-transform duration-200 ease-out group-hover:translate-x-1'>
+              →
+            </span>
+          </h3>
+        </Link>
+      )}
     </section>
   )
 }

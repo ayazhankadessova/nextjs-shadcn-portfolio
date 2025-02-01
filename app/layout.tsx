@@ -25,7 +25,7 @@ export default function RootLayout({
         className={cn('min-h-screen font-mono antialiased', inter.variable)}
       >
         <Providers>
-          <SiteHeader />
+          {/* <SiteHeader /> */}
           <BackgroundImage />
           <div className='relative flex min-h-dvh flex-col container max-w-4xl mx-auto px-6 md:px-8 py-16'>
             <main className='flex-1'>{children}</main>

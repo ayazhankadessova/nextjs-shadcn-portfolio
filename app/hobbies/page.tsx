@@ -22,7 +22,7 @@ export default function HobbiesPage() {
                 }
               >
                 {hobby.images.map((image, index) => (
-                  <div key={index} className='flex flex-col items-center'>
+                  <div key={index} className='flex flex-col items-center w-2/3'>
                     <Image
                       src={image.src}
                       alt={image.alt}

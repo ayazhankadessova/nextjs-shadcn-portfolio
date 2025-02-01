@@ -6,17 +6,17 @@ import { AllSocials } from '@/components/all-socials'
 
 export default function Hero() {
   return (
-    <div id="top" className='flex items-start mb-16'>
+    <section id='top' className='flex items-start mb-16'>
       {/* Main content */}
       <div className='flex-1'>
         <p className='text-sm font-medium text-muted-foreground mb-3'>
           Hi, my name is
         </p>
-        <h1 className='text-6xl font-bold mb-4'>Ayazhan Kadessova</h1>
-        <h2 className='text-4xl font-bold text-muted-foreground mb-6'>
+        <h1 className='text-4xl font-bold mb-2'>Ayazhan Kadessova</h1>
+        <h2 className='text-2xl font-bold text-muted-foreground mb-4'>
           Software Developer
         </h2>
-        <p className='text-xl text-muted-foreground mb-8 max-w-2xl'>
+        <p className='text-md text-muted-foreground mb-8 max-w-2xl'>
           I bring ideas to life through carefully crafted, accessible web
           solutions.
         </p>
@@ -58,6 +58,6 @@ export default function Hero() {
           <div className='w-[1px] h-5 bg-muted-foreground/40 mt-6' />
         </div>
       </div>
-    </div>
+    </section>
   )
 }

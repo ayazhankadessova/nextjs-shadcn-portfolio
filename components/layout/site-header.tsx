@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Github, Linkedin } from 'lucide-react'
@@ -17,34 +17,46 @@ import headerNavLinks from '@/config/headerNavLinks'
 import { cn } from '@/lib/utils'
 
 export function SiteHeader() {
-
   const [activeSection, setActiveSection] = useState<string>('')
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          console.log(entry.target.id)
-          if (entry.target.id === 'top') {
-              setActiveSection('')
-            } else {
-              setActiveSection(entry.target.id)
-            }
-        })
+        // Sort entries by their vertical position
+        const intersectingEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => {
+            const rectA = a.target.getBoundingClientRect()
+            const rectB = b.target.getBoundingClientRect()
+            return rectA.top - rectB.top
+          })
+
+        // If we have any intersecting entries
+        if (intersectingEntries.length > 0) {
+          const firstSection = intersectingEntries[0]
+
+          setActiveSection(firstSection.target.id)
+        }
       },
       {
-        rootMargin: '-80px 0px -80% 0px', // Adjusts when section is considered "active"
+        rootMargin: '-80px 0px -80% 0px',
       }
     )
 
-    // Observe all sections
-    document.querySelectorAll('section[id]').forEach((section) => {
-      observer.observe(section)
-    })
+    setTimeout(() => {
+      const sections = document.querySelectorAll('section[id]')
+      // console.log(
+      //   'Found sections:',
+      //   Array.from(sections).map((s) => s.id)
+      // )
+      sections.forEach((section) => {
+        observer.observe(section)
+      })
+    }, 10)
 
     return () => observer.disconnect()
   }, [])
-  
+
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
