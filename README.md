@@ -46,8 +46,14 @@ This is a portfolio template built using Next.JS, Framer Motion and Shadcn/UI.
 ## <a name="iterations">🌈 Iterations</a>
 
 ### v1.0.0: Independent sections as pages
-<img width="500" alt="experience" src="https://github.com/user-attachments/assets/94126d27-b0b0-4ccc-96a8-36ec84867001" />
-<img width="500" alt="projects" src="https://github.com/user-attachments/assets/e86f78e1-20d1-44e4-bcf0-a88ecceae06d" />
+<img width="240" alt="experience" src="https://github.com/user-attachments/assets/94126d27-b0b0-4ccc-96a8-36ec84867001" />
+<img width="240" alt="projects" src="https://github.com/user-attachments/assets/e86f78e1-20d1-44e4-bcf0-a88ecceae06d" />
+
+### v2.0.0: Unified Landing Page with Section Navigation
+
+- A streamlined redesign that transforms landing page into a single scrollable experience.
+<img width="240" alt="main-v2" src="https://github.com/user-attachments/assets/4d2dabba-6f49-4d39-a325-64bbd07f48e9" />
+<img width="240" alt="experience-v2" src="https://github.com/user-attachments/assets/3b837af0-9084-468b-8b68-9ad70fb238c6" />
 
 ## <a name="getting-started">🚀 Getting Started</a>
 
