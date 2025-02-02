@@ -78,10 +78,20 @@ export function SiteHeader() {
           <a
             href='#top'
             onClick={(e) => scrollToSection(e, '#top')}
-            className='text-lg font-semibold bg-gradient-to-r from-purple-600 to-green-500 bg-clip-text text-transparent'
+            className='hidden md:flex text-lg font-semibold bg-gradient-to-r from-purple-600 to-green-500 bg-clip-text text-transparent'
           >
             {siteConfig.name}
           </a>
+          {activeSection && activeSection !== 'top' && (
+            <span
+              className={cn(
+                'md:hidden text-sm font-medium transition-colors relative',
+                'text-purple-500 after:content-[""] after:block after:h-0.5 after:bg-purple-500 after:absolute after:-bottom-1 after:left-0 after:right-0'
+              )}
+            >
+              {activeSection.toUpperCase()}
+            </span>
+          )}
 
           <NavigationMenu className='hidden md:flex'>
             <NavigationMenuList className='gap-6'>
@@ -129,19 +139,19 @@ export function SiteHeader() {
           </NavigationMenu>
         </div>
 
-        <div className='flex items-center gap-4'>
-          <div className='hidden md:flex items-center gap-4'>
+        <div className='flex items-center'>
+          <div className='hidden md:flex items-center'>
             <Link
               href={siteConfig.socials.github}
-              className='hover:text-purple-500 transition-colors'
+              className='hover:text-purple-500 transition-colors p-2'
             >
-              <Github className='h-5 w-5' />
+              <Github className='h-[1.1rem] w-[1.1rem]' />
             </Link>
             <Link
               href={siteConfig.socials.linkedin}
-              className='hover:text-purple-500 transition-colors'
+              className='hover:text-purple-500 transition-colors p-2'
             >
-              <Linkedin className='h-5 w-5' />
+              <Linkedin className='h-[1.1rem] w-[1.1rem]' />
             </Link>
             <ThemeToggle />
           </div>

@@ -22,7 +22,6 @@ export default function MobileNav() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-
         const visibleSections = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => {
@@ -30,7 +29,6 @@ export default function MobileNav() {
             const bDistance = Math.abs(b.boundingClientRect.top)
             return aDistance - bDistance
           })
-  
 
         if (visibleSections.length > 0) {
           const currentSection = visibleSections[0].target.id
@@ -86,40 +84,49 @@ export default function MobileNav() {
 
   return (
     <Sheet open={open} onOpenChange={onToggleNav}>
-      <ThemeToggle />
-      <SheetTrigger asChild>
-        <Button variant='ghost' className='w-10 px-0 md:hidden'>
-          <Menu className='h-[1.1rem] w-[1.2rem]' />
-        </Button>
-      </SheetTrigger>
-      <SheetContent side='right'>
-        <MobileLink
-          onOpenChange={onToggleNav}
+      <div className='flex items-center'>
+        <a
           href='#top'
-          className='flex items-center'
           onClick={() => scrollToSection('#top')}
+          className='text-lg font-semibold bg-gradient-to-r from-purple-600 to-green-500 bg-clip-text text-transparent px-2'
         >
-          <span className='font-bold'>{siteConfig.name}</span>
-        </MobileLink>
-        <div className='flex flex-col gap-3 mt-3'>
-          {Object.values(headerNavLinks).map((dialog) => (
-            <MobileLink
-              key={dialog.title}
-              onOpenChange={onToggleNav}
-              href={dialog.href}
-              onClick={() => scrollToSection(dialog.href)}
-              className={cn(
-                'relative transition-colors',
-                activeSection && activeSection === dialog.href.slice(1)
-                  ? 'text-purple-500 underline after:content-[""] after:block after:h-0.5 after:bg-purple-500 after:absolute after:-bottom-1'
-                  : 'hover:text-purple-500'
-              )}
-            >
-              {dialog.title}
-            </MobileLink>
-          ))}
-        </div>
-      </SheetContent>
+          {siteConfig.name}
+        </a>
+        <ThemeToggle />
+        <SheetTrigger asChild>
+          <Button variant='ghost' className='p-2 md:hidden'>
+            <Menu className='h-[1.1rem] w-[1.2rem]' />
+          </Button>
+        </SheetTrigger>
+        <SheetContent side='right'>
+          <MobileLink
+            onOpenChange={onToggleNav}
+            href='#top'
+            className='flex items-center'
+            onClick={() => scrollToSection('#top')}
+          >
+            <span className='font-bold'>{siteConfig.name}</span>
+          </MobileLink>
+          <div className='flex flex-col gap-3 mt-3'>
+            {Object.values(headerNavLinks).map((dialog) => (
+              <MobileLink
+                key={dialog.title}
+                onOpenChange={onToggleNav}
+                href={dialog.href}
+                onClick={() => scrollToSection(dialog.href)}
+                className={cn(
+                  'relative transition-colors',
+                  activeSection && activeSection === dialog.href.slice(1)
+                    ? 'text-purple-500 underline after:content-[""] after:block after:h-0.5 after:bg-purple-500 after:absolute after:-bottom-1'
+                    : 'hover:text-purple-500'
+                )}
+              >
+                {dialog.title}
+              </MobileLink>
+            ))}
+          </div>
+        </SheetContent>
+      </div>
     </Sheet>
   )
 }
