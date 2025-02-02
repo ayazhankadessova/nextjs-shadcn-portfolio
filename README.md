@@ -46,13 +46,8 @@ This is a portfolio template built using Next.JS, Framer Motion and Shadcn/UI.
 ## <a name="iterations">🌈 Iterations</a>
 
 ### v1.0.0: Independent sections as pages
-<img width="500" alt="main" src="https://github.com/user-attachments/assets/9d3b0955-45a9-438a-85af-36c0a6e808a6" />
-<img width="500" alt="about" src="https://github.com/user-attachments/assets/bd2728c8-494b-4a69-ba72-058019bbfd2f" />
 <img width="500" alt="experience" src="https://github.com/user-attachments/assets/94126d27-b0b0-4ccc-96a8-36ec84867001" />
 <img width="500" alt="projects" src="https://github.com/user-attachments/assets/e86f78e1-20d1-44e4-bcf0-a88ecceae06d" />
-<img width="500" alt="blog" src="https://github.com/user-attachments/assets/74e3f041-f4bb-4006-acf2-173d6b154043" />
-<img width="500" alt="hobbies" src="https://github.com/user-attachments/assets/c59b2b74-6a37-421e-be60-d2d5e3e9eef5" />
-<img width="500" alt="contact" src="https://github.com/user-attachments/assets/83bd6234-0767-4a25-9802-f3d72160ae35" />
 
 ## <a name="getting-started">🚀 Getting Started</a>
 
