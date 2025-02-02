@@ -16,7 +16,7 @@ export default function HobbiesPage({ variant = 'default' }: HobbiesPageProps) {
       <div className='space-y-12'>
         {displayedHobbies.map((hobby) => (
           <div key={hobby.id} className='gap-4 sm:gap-6 md:gap-8'>
-            <h2 className='text-lg font-normal mb-5'>⋅ {hobby.title}</h2>
+            <h2 className='text-lg font-medium mb-5'>⋅ {hobby.title}</h2>
             <div>
               {variant === 'default' && <p className='mb-6'>{hobby.content}</p>}
 
@@ -66,8 +66,11 @@ export default function HobbiesPage({ variant = 'default' }: HobbiesPageProps) {
 
       {variant === 'short' && (
         <Link href={'/hobbies'} className='block group mt-8'>
-          <h3 className='text-md font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
-            View All Hobbies
+          <h3 className='text-lg font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
+            <span className='relative transition-colors'>
+              View All Hobbies
+              <span className='absolute -bottom-1 left-0 right-0 h-0.5 bg-purple-500 transform scale-x-0 transition-transform group-hover:scale-x-100'></span>
+            </span>
             <span className='font-semibold inline-block transition-transform duration-200 ease-out group-hover:translate-x-1'>
               →
             </span>

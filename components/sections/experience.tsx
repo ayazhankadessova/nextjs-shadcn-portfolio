@@ -80,10 +80,14 @@ export default function Experience({
           </div>
         ))}
       </div>
+
       {variant === 'short' && (
         <Link href={'/experience'} className='block group mt-8'>
-          <h3 className='text-md font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
-            View Full Experience & Resume
+          <h3 className='text-lg font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
+            <span className='relative transition-colors'>
+              View Full Experience & Resume
+              <span className='absolute -bottom-1 left-0 right-0 h-0.5 bg-purple-500 transform scale-x-0 transition-transform group-hover:scale-x-100'></span>
+            </span>
             <span className='font-semibold inline-block transition-transform duration-200 ease-out group-hover:translate-x-1'>
               →
             </span>

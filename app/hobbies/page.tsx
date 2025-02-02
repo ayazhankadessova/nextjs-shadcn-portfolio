@@ -2,10 +2,14 @@ import React from 'react'
 import { hobbies } from '@/data/hobbies'
 import Image from 'next/image'
 import { Highlight } from '@/components/ui/highlight'
+import BackToMain from '@/components/ui/back-to-main'
 
 export default function HobbiesPage() {
   return (
-    <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
+    <div className='container max-w-4xl mx-auto px-2 md:px-4 py-10'>
+      <div className='mb-4'>
+        <BackToMain />
+      </div>
       <h1 className='text-xl font-semibold mb-8'>H O B B I E S</h1>
       {hobbies.map((hobby) => (
         <section key={hobby.id} className='mb-14'>

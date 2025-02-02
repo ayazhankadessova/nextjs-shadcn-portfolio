@@ -11,7 +11,7 @@ export default function BackButton() {
     router.back()
   }
   return (
-    <Button variant='ghost' onClick={handleGoBack} className='ml-0 py-0 px-0'>
+    <Button variant='ghost' onClick={handleGoBack} className='px-2'>
       <ChevronLeft className='h-4 w-4' />
       BACK
     </Button>

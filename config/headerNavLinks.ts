@@ -18,17 +18,17 @@ const dialogsInfo: DialogsInfo = {
   },
   Blog: {
     title: 'Blog',
-    href: '/blog',
+    href: '#blog',
     toggle: false,
   },
   Hobbies: {
     title: 'Hobbies',
-    href: '/hobbies',
+    href: '#hobbies',
     toggle: false,
   },
   Contact: {
     title: 'Contact',
-    href: '/contact',
+    href: '#contact',
     toggle: false,
   },
 }
