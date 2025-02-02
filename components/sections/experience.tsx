@@ -32,12 +32,14 @@ export default function Experience({
             <div>
               {exp.link ? (
                 <Link href={exp.link} className='block group'>
-                  <h3 className='text-lg font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
-                    {exp.position} • {exp.company}
-                    <span className='font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
-                      ↗
+                  <div className='text-lg font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center'>
+                    <span className='inline-flex items-center'>
+                      {exp.position} • {exp.company}
+                      <span className='ml-1 font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
+                        ↗
+                      </span>
                     </span>
-                  </h3>
+                  </div>
                 </Link>
               ) : (
                 <h3 className='text-lg font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
