@@ -19,6 +19,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import BackToMain from '@/components/ui/back-to-main'
 
 interface BlogPageProps {
   searchParams: {
@@ -51,7 +52,10 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
   )
 
   return (
-    <div className='container max-w-4xl mx-auto px-2 md:px-4 py-16'>
+    <div className='container max-w-4xl mx-auto px-6 md:px-8 py-10'>
+      <div className='mb-4'>
+        <BackToMain />
+      </div>
       <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8'>
         <h1 className='text-xl font-semibold'>B L O G</h1>
         <div className='flex flex-col sm:flex-row gap-4'>

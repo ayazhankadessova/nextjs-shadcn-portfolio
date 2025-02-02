@@ -3,32 +3,32 @@ import {DialogsInfo} from "@/types/app"
 const dialogsInfo: DialogsInfo = {
   About: {
     title: 'About',
-    href: '/about',
+    href: '#about',
     toggle: false,
   },
   Experience: {
     title: 'Experience',
-    href: '/experience',
+    href: '#experience',
     toggle: false,
   },
   Projects: {
     title: 'Projects',
-    href: '/projects',
+    href: '#projects',
     toggle: false,
   },
   Blog: {
     title: 'Blog',
-    href: '/blog',
+    href: '#blog',
     toggle: false,
   },
   Hobbies: {
     title: 'Hobbies',
-    href: '/hobbies',
+    href: '#hobbies',
     toggle: false,
   },
   Contact: {
     title: 'Contact',
-    href: '/contact',
+    href: '#contact',
     toggle: false,
   },
 }

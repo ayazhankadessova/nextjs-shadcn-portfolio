@@ -28,8 +28,8 @@ export function SharePost({ fullLink }: SharePostProps) {
     <div className='flex'>
       <Popover>
         <PopoverTrigger asChild>
-          <Button variant='secondary'>
-            <Share2 className='mr-2 h-3 w-3' />
+          <Button variant='ghost'>
+            <Share2 className='md:mr-2 h-4 w-4' />
             <span className='hidden md:block'>Share</span>
           </Button>
         </PopoverTrigger>

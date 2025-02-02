@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Github, Linkedin } from 'lucide-react'
 import {
@@ -16,16 +17,81 @@ import headerNavLinks from '@/config/headerNavLinks'
 import { cn } from '@/lib/utils'
 
 export function SiteHeader() {
+  const [activeSection, setActiveSection] = useState<string>('')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Sort entries by their vertical position
+        const intersectingEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => {
+            const rectA = a.target.getBoundingClientRect()
+            const rectB = b.target.getBoundingClientRect()
+            return rectA.top - rectB.top
+          })
+
+        // If we have any intersecting entries
+        if (intersectingEntries.length > 0) {
+          const firstSection = intersectingEntries[0]
+
+          setActiveSection(firstSection.target.id)
+        }
+      },
+      {
+        rootMargin: '-80px 0px -80% 0px',
+      }
+    )
+
+    setTimeout(() => {
+      const sections = document.querySelectorAll('section[id]')
+      // console.log(
+      //   'Found sections:',
+      //   Array.from(sections).map((s) => s.id)
+      // )
+      sections.forEach((section) => {
+        observer.observe(section)
+      })
+    }, 10)
+
+    return () => observer.disconnect()
+  }, [])
+
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault()
+    const element = document.querySelector(href)
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset
+      window.scrollTo({
+        top: offsetTop - 80, // Adjust for header height
+        behavior: 'smooth',
+      })
+    }
+  }
   return (
     <header className='sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 pl-6 pr-4'>
       <div className='container flex h-16 items-center justify-between px-0'>
         <div className='flex gap-6 items-center'>
-          <Link
-            href='/'
-            className='text-lg font-semibold bg-gradient-to-r from-purple-600 to-green-500 bg-clip-text text-transparent'
+          <a
+            href='#top'
+            onClick={(e) => scrollToSection(e, '#top')}
+            className='hidden md:flex text-lg font-semibold bg-gradient-to-r from-purple-600 to-green-500 bg-clip-text text-transparent'
           >
             {siteConfig.name}
-          </Link>
+          </a>
+          {activeSection && activeSection !== 'top' && (
+            <span
+              className={cn(
+                'md:hidden text-sm font-medium transition-colors relative',
+                'text-purple-500 after:content-[""] after:block after:h-0.5 after:bg-purple-500 after:absolute after:-bottom-1 after:left-0 after:right-0'
+              )}
+            >
+              {activeSection.toUpperCase()}
+            </span>
+          )}
 
           <NavigationMenu className='hidden md:flex'>
             <NavigationMenuList className='gap-6'>
@@ -52,9 +118,19 @@ export function SiteHeader() {
                 ) : (
                   <NavigationMenuItem key={dialog.title}>
                     <Link href={dialog.href} legacyBehavior passHref>
-                      <NavigationMenuLink className='text-sm font-medium hover:text-purple-500 transition-colors'>
+                      <a
+                        href={dialog.href}
+                        onClick={(e) => scrollToSection(e, dialog.href)}
+                        className={cn(
+                          'text-sm font-medium transition-colors relative',
+                          activeSection === dialog.href.slice(1)
+                            ? 'text-purple-500 after:content-[""] after:block after:h-0.5 after:bg-purple-500 after:absolute after:-bottom-1 after:left-0 after:right-0'
+                            : 'hover:text-purple-500'
+                        )}
+                        // className='text-sm font-medium hover:text-purple-500 transition-colors'
+                      >
                         {dialog.title}
-                      </NavigationMenuLink>
+                      </a>
                     </Link>
                   </NavigationMenuItem>
                 )
@@ -63,19 +139,19 @@ export function SiteHeader() {
           </NavigationMenu>
         </div>
 
-        <div className='flex items-center gap-4'>
-          <div className='hidden md:flex items-center gap-4'>
+        <div className='flex items-center'>
+          <div className='hidden md:flex items-center'>
             <Link
               href={siteConfig.socials.github}
-              className='hover:text-purple-500 transition-colors'
+              className='hover:text-purple-500 transition-colors p-2'
             >
-              <Github className='h-5 w-5' />
+              <Github className='h-[1.1rem] w-[1.1rem]' />
             </Link>
             <Link
               href={siteConfig.socials.linkedin}
-              className='hover:text-purple-500 transition-colors'
+              className='hover:text-purple-500 transition-colors p-2'
             >
-              <Linkedin className='h-5 w-5' />
+              <Linkedin className='h-[1.1rem] w-[1.1rem]' />
             </Link>
             <ThemeToggle />
           </div>

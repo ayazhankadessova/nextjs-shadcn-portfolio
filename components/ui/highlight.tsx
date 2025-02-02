@@ -55,7 +55,7 @@ export function Highlight({
     <Wrapper
       href={href}
       className={cn(
-        'my-6 flex items-center rounded-lg border p-4 transition-colors',
+        'flex items-center rounded-lg border py-2 px-4 transition-colors',
         variants[variant].container,
         'dark:bg-opacity-10',
         className

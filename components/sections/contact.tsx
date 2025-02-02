@@ -4,14 +4,10 @@ import { Mail, Send } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { contactInfo } from '@/data/contact'
-import BackToMain from '@/components/ui/back-to-main'
 
 export default function ContactPage() {
   return (
-    <div className='container max-w-4xl mx-auto px-2 md:px-4 py-10'>
-      <div className='mb-4'>
-        <BackToMain />
-      </div>
+    <section className='mb-16' id='contact'>
       <h1 className='text-2xl font-semibold mb-8'>C O N T A C T</h1>
 
       <div className='text-center'>
@@ -54,6 +50,6 @@ export default function ContactPage() {
           </div>
         </Card>
       </div>
-    </div>
+    </section>
   )
 }
