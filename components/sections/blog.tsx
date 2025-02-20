@@ -7,7 +7,8 @@ import '@/styles/mdx-style.css'
 import Link from 'next/link'
 
 export default function BlogPage() {
-  const sortedPosts = sortPosts(posts).slice(3, posts.length)
+  const sortedPostsFirst = sortPosts(posts)
+  const sortedPosts = sortedPostsFirst.slice(0, 3)
 
   return (
     <section className='mb-16' id='blog'>

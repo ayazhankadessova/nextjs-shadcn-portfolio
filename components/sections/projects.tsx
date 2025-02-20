@@ -70,22 +70,26 @@ export default function ProjectsPage({
                 ))}
               </div>
               <div className='flex gap-4'>
-                <Button
-                  variant='ghost'
-                  size='sm'
-                  className='text-sm gap-2 hover:bg-transparent hover:text-primary'
-                >
-                  <Github className='w-4 h-4' />
-                  View Code
-                </Button>
-                <Button
-                  variant='ghost'
-                  size='sm'
-                  className='text-sm gap-2 hover:bg-transparent hover:text-primary'
-                >
-                  <ExternalLink className='w-4 h-4' />
-                  Live Demo
-                </Button>
+                <Link href={project.github} passHref>
+                  <Button
+                    variant='ghost'
+                    size='sm'
+                    className='text-sm gap-2 hover:bg-transparent hover:text-primary'
+                  >
+                    <Github className='w-4 h-4' />
+                    View Code
+                  </Button>
+                </Link>
+                <Link href={project.demo} passHref>
+                  <Button
+                    variant='ghost'
+                    size='sm'
+                    className='text-sm gap-2 hover:bg-transparent hover:text-primary'
+                  >
+                    <ExternalLink className='w-4 h-4' />
+                    Live Demo
+                  </Button>
+                </Link>
               </div>
             </div>
 
