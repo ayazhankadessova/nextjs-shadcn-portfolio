@@ -214,15 +214,15 @@ const ThreeNameAnimation = () => {
 
       // Text materials
       const matLite = new THREE.MeshBasicMaterial({
-        color: 0x000000,
+        color: '#8e6dd0',
         transparent: true,
-        opacity: 0.6,
+        opacity: 0.9,
         side: THREE.DoubleSide,
       })
 
       // Edge material
       const matDark = new THREE.LineBasicMaterial({
-        color: 0x000000,
+        color: '#8e6dd0',
         side: THREE.DoubleSide,
       })
 
