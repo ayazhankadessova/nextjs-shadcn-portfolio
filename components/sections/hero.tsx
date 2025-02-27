@@ -1,8 +1,20 @@
-// app/page.tsx
+'use client'
 
 import React from 'react'
 import Link from 'next/link'
 import { AllSocials } from '@/components/all-socials'
+import dynamic from 'next/dynamic'
+
+// Dynamically import ThreeScene to ensure it only loads on client-side
+const ThreeNameAnimation = dynamic(
+  () => import('@/components/ThreeNameAnimation'),
+  {
+    ssr: false,
+    loading: () => (
+      <h1 className='text-4xl font-bold mb-2'>Ayazhan Kadessova</h1>
+    ),
+  }
+)
 
 export default function Hero() {
   return (
@@ -12,7 +24,17 @@ export default function Hero() {
         <p className='text-sm font-medium text-muted-foreground mb-3'>
           Hi, my name is
         </p>
-        <h1 className='text-4xl font-bold mb-2'>Ayazhan Kadessova</h1>
+
+        {/* Three.js name animation container */}
+        <div className='h-48 mb-2'>
+          <ThreeNameAnimation />
+        </div>
+
+        {/* <h1 className='text-4xl font-bold mb-2'>
+          {' '}
+          <ThreeNameAnimation />
+        </h1> */}
+
         <h2 className='text-2xl font-bold text-muted-foreground mb-4'>
           Software Developer
         </h2>
@@ -37,7 +59,6 @@ export default function Hero() {
               Get in Touch
             </Link>
           </div>
-
           {/* Medium screen socials */}
           <div className='hidden sm:block md:hidden'>
             <AllSocials orientation='horizontal' />

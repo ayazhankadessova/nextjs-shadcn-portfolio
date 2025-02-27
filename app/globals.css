@@ -67,8 +67,12 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply text-foreground;
+  }
+
+  .dark canvas {
+    filter: invert(1) hue-rotate(180deg);
   }
 }
