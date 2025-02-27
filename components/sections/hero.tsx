@@ -11,7 +11,7 @@ const ThreeNameAnimation = dynamic(
   {
     ssr: false,
     loading: () => (
-      <h1 className='text-4xl font-bold mb-2'>Ayazhan Kadessova</h1>
+      <h1 className='text-4xl font-bold mb-2'>loading 3d model...</h1>
     ),
   }
 )
