@@ -105,3 +105,5 @@ This design/alignments for this project were inspired by:
 - [techwithanirudh](https://shadcn-portfoliox.vercel.app)
 - [brittanychiang.com](https://brittanychiang.com)
 
+
+size fix

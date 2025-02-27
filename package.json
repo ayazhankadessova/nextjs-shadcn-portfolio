@@ -35,7 +35,8 @@
     "react-dom": "^18",
     "shiki": "^1.14.1",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.173.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.14",
@@ -43,6 +44,7 @@
     "@types/react": "^18",
     "@types/react-cache": "^2.0.4",
     "@types/react-dom": "^18",
+    "@types/three": "^0.173.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "mini-css-extract-plugin": "^2.9.1",

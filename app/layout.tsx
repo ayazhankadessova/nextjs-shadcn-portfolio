@@ -32,6 +32,8 @@ export default function RootLayout({
             <BlogFooter />
           </div>
         </Providers>
+        {/* <canvas className='threejs'></canvas> */}
+        {/* <script type='module' src='./script.js'></script> */}
       </body>
     </html>
   )
