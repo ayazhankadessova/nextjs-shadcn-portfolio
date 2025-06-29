@@ -16,30 +16,43 @@ export default function AboutPage({ variant = 'default' }: AboutPageProps) {
         <h1 className='text-2xl font-semibold mb-8'>A B O U T</h1>
         <div className='space-y-6 text-muted-foreground'>
           <p className='space-y-4 leading-relaxed'>
-            I am a developer with a passion for creating intuitive and engaging
-            web experiences. Currently, I am building{' '}
-            <a
-              href='https://python-bit.vercel.app'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-primary hover:text-primary/80 transition-colors'
-            >
-              PythonBit
-            </a>
-            , web platform to help students gain confidence in Python via
-            real-time classrooms, tutorials, and fun projects.
-          </p>
-          <p>
-            As a senior pursuing a{' '}
-            <span className='text-foreground font-medium'>
-              BSc in Computer Science
+            Hiiii, I am Aya, a developer with a passion for creating intuitive &
+            engaging web experiences. I currently work as a{' '}
+            <span className='text-primary'>
+              Software Engineer
             </span>{' '}
             at{' '}
+            <a
+              href='https://www.thetradedesk.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline hover:text-primary/80 hover:italic transition-colors'
+            >
+              The Trade Desk 💙
+            </a>{' '}
+            in Hong Kong. In my free time, I am building my passion project{' '}
+            <a
+              href='https://www.pythonbit.io'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary underline hover:text-primary/80 transition-colors hover:italic'
+            >
+              PythonBit{' '}
+            </a>
+            - it is a web platform to help young students learn
+            Python via real-time classrooms, tutorials, and fun projects.
+          </p>
+          <p>
+            As{' '}
+            <span className='text-primary'>
+              BSc in Computer Science
+            </span>{' '}
+            graduate from{' '}
             <a
               href='https://www.hkbu.edu.hk/'
               target='_blank'
               rel='noopener noreferrer'
-              className='text-primary hover:text-primary/80 transition-colors'
+              className='text-primary underline hover:text-primary/80 hover:italic transition-colors'
             >
               Hong Kong Baptist University
             </a>
@@ -49,11 +62,11 @@ export default function AboutPage({ variant = 'default' }: AboutPageProps) {
           <p>
             {' '}
             My journey in tech has led me to work on various projects, from{' '}
-            <span className='text-foreground font-medium'>
+            <span className='text-primary'>
               full-stack web applications
             </span>{' '}
             to{' '}
-            <span className='text-foreground font-medium'>
+            <span className='text-primary'>
               data visualization tools
             </span>
             . Beyond coding, I am deeply interested in user experience design

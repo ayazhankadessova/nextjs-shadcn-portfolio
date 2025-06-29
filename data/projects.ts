@@ -12,7 +12,7 @@ export const projects: Project[] = [
       "Revamped platform's UI and visual design using shadcn/ui",
     ],
     github: 'https://github.com/ayazhankadessova/python-bit',
-    demo: 'https://python-bit.vercel.app',
+    demo: 'https://www.pythonbit.io',
   },
   {
     title: 'Senior Connect',
