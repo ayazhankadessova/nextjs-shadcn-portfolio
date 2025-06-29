@@ -30,13 +30,6 @@ export default function ProjectsPage({
       {/* <h1 className='text-xl font-semibold mb-8'>P R O J E C T S</h1> */}
 
       <h1 className='text-xl font-semibold mb-8'>P R O J E C T S</h1>
-
-      {/* Sticky header - appears while scrolling */}
-      {/* <div className='sticky top-16 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0'>
-        <h2 className='text-sm font-bold uppercase tracking-widest text-foreground lg:sr-only'>
-          Projects
-        </h2>
-      </div> */}
       <div className='space-y-12'>
         {displayedProjects.map((project, index) => (
           <div
