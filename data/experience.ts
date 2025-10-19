@@ -2,6 +2,24 @@ import { Experience } from '@/types/data'
 
 export const experiences: Experience[] = [
   {
+    company: 'The Trade Desk',
+    link: 'https://www.thetradedesk.com',
+    location: 'Hong Kong',
+    position: 'Software Engineering Intern',
+    period: 'Jun. 2025 - Aug. 2025',
+    projects: [
+      {
+        name: 'Creative Assignment Recommender',
+        tech: ['GraphQL', 'C#', '.NET'],
+        achievements: [
+          'Led the design and rollout of a creative recommender feature for Kokai, an AI-powered programmatic advertising platform, automating the creative selection process for advertisers and generating an average of 4,300 daily assignments with 99% uptime in 300ms, using Graphic, .NET, C#, GraphQL.',
+          'Conducted analysis of advertiser-specific patterns to integrate data pipelines, improving recall by 15% through dynamic thresholding and enabling more effective advertising campaign strategies.',
+          'Collaborated with engineering teams to validate feature integrity via End-to-End and Integration tests, managed database migrations, and ensured seamless daily deployments while minimizing disruptions to existing systems.',
+        ],
+      },
+    ],
+  },
+  {
     company: 'GitRoll',
     link: 'https://gitroll.io',
     location: 'California, USA',
