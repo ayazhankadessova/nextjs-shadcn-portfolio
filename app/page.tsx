@@ -16,8 +16,8 @@ export default function MainPage() {
       <SiteHeader />
       <div className='container max-w-4xl mx-auto px-6 md:px-8 py-16'>
         <Hero />
-        <Experience variant='short' />
         <AboutPage variant='short' />
+        <Experience variant='short' />
         <ProjectsPage variant='short' />
         <BlogPage />
         <HobbiesPage variant='short' />
