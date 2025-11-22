@@ -1,0 +1,69 @@
+---
+title: RunBuild Feature Exploration
+description: Design explorations that made the RunBuild running app simpler, faster, and more shareable.
+published: true
+tags: ['runbuild', 'uiux']
+image: /projects/project-1.png
+---
+# RunBuild: Building Lasting Running Habits
+
+As the UI designer for RunBuild, a lifestyle learning app that helps people create sustainable running routines, I focused on simplifying the experience for beginners. The product already showed promise with more than 1,000 downloads, strong satisfaction scores, and a cost per download three times lower than similar apps. My work centered on keeping that momentum by pairing personalization features with accessible design.
+
+![RunBuild mobile hero screens showcasing workouts, achievements, and the content library](/projects/runville/hero.png)
+
+## Challenges Identified
+
+- **Navigation friction:** Most users were from Kazakhstan and new to learning apps. They often struggled to find key areas such as the workout library or the start run button, generating a steady stream of support emails.
+- **Exhausting week planning:** The original onboarding required lengthy weekly planning forms. Casual runners who wanted a quick workout found the process overwhelming and frequently dropped off.
+- **Limited shareable moments:** Community-minded runners wanted creative ways to celebrate their progress and promote the app organically.
+
+## Ideation and Solutions
+
+### Onboarding Stories
+
+I designed a six-story onboarding flow inspired by Instagram. Each story highlights a core feature, demonstrates the relevant taps, and sets user expectations. This format immediately answered the most common support questions and reduced the time it took for users to feel confident exploring the interface.
+
+<div
+	style={{
+		display: 'flex',
+		gap: '0.75rem',
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		flexWrap: 'nowrap',
+	}}
+>
+	{[
+		'/projects/runville/onboarding-stories/onb-1.png',
+		'/projects/runville/onboarding-stories/onb-2.png',
+		'/projects/runville/onboarding-stories/onb-3.png',
+		'/projects/runville/onboarding-stories/onb-4.png',
+		'/projects/runville/onboarding-stories/onb-5.png',
+        '/projects/runville/onboarding-stories/onb-6.png',
+	].map((src, index) => (
+		<img
+			key={src}
+			src={src}
+			alt={`RunBuild onboarding story ${index + 1}`}
+			style={{ width: '120px', height: 'auto', borderRadius: '12px' }}
+			loading='lazy'
+		/>
+	))}
+</div>
+
+### Daily Session Generation
+
+To eliminate choice paralysis, we shifted from weekly planning to a single adaptive daily workout. The session draws from the information gathered during registration and offers three simple actions: accept, shuffle for a new option, or adjust advanced settings such as intensity or run type. The update respected the behavior of tired or casual runners who just wanted to get moving quickly.
+
+### Image Generation Tool
+
+For higher engagement, I introduced a lightweight image generator. Runners can select templates, combine them with their own photos and workout stats, and instantly publish to social channels. The feature taps into existing sharing habits and encourages organic app promotion.
+
+{/* ![RunBuild screen highlighting the shareable workout story generator](/projects/runville/image-gen/image-gen1.png) */}
+
+### Library Tab Expansion
+
+I also mapped the structure for a refreshed library tab. The area mixes free and premium workouts, expert-written articles on topics like fueling or marathon prep, and quick AI follow ups. The goal was to lengthen in-app sessions and demonstrate the value of upgrading without creating a paywall wall of text.
+
+## Key Outcomes
+
+Together these updates made the app friendlier, faster, and more motivating for new runners. I left the project with stronger instincts for balancing delightful UI moments with accessibility. Most importantly, the work aligned with RunBuild's mission: help people build lasting habits, not just collect another abandoned training plan.

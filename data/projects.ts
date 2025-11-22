@@ -2,10 +2,25 @@ import { Project } from "@/types/data"
 
 export const projects: Project[] = [
   {
+    title: 'Runville - Lifestyle Running App',
+    description: 'Mobile App',
+    image: '/projects/project-1.png',
+    tech: ['Next.js 14', 'TypeScript', 'Firebase', 'Socket.IO'],
+    link: '/projects/runville',
+    points: [
+      'Developed real-time interactive learning platform that enhanced student engagement via live code collaboration between teachers and students',
+      'Integrated AI assistant, real-time progress tracking, and comprehensive curriculum management system',
+      "Revamped platform's UI and visual design using shadcn/ui",
+    ],
+    github: 'https://github.com/ayazhankadessova/python-bit',
+    demo: 'https://python-bit.vercel.app',
+  },
+  {
     title: 'Interactive Python Learning Platform',
     description: 'Web App',
     image: '/projects/project-1.png',
     tech: ['Next.js 14', 'TypeScript', 'Firebase', 'Socket.IO'],
+    link: null,
     points: [
       'Developed real-time interactive learning platform that enhanced student engagement via live code collaboration between teachers and students',
       'Integrated AI assistant, real-time progress tracking, and comprehensive curriculum management system',
@@ -19,6 +34,7 @@ export const projects: Project[] = [
     description: 'IOS Mobile App',
     image: '/projects/project-2.png',
     tech: ['Swift', 'Express.js', 'MongoDB'],
+    link: null,
     points: [
       'Built a digital learning iOS app using SwiftUI, helping seniors master technology through interactive tutorials in 4 sections, quizzes, mentorship, and progress tracking.',
       'Implemented RESTful API with MongoDB to manage events and mentorship features, handling user progress tracking and event registrations.',
@@ -31,6 +47,7 @@ export const projects: Project[] = [
     description: 'MacOS App + M5 Stick',
     image: '/projects/project-3.png',
     tech: ['Swift', 'Express.js', 'MongoDB'],
+    link: null,
     points: [
       'Built a multi-tab IOT app with YouTube Demo integrating BLE tally counter, soil moisture monitoring, and Azure IoT Hub data visualization.',
       'BLE Counter: Implemented real-time Bluetooth data collection from M5StickC with SwiftChart visualization.',
@@ -45,6 +62,7 @@ export const projects: Project[] = [
     description: 'Open Source Data Analysis Project',
     image: '/projects/project-4.png',
     tech: ['Python', 'Beautiful Soup', 'Web Scraping', 'Data Science'],
+    link: null,
     points: [
       'Developed an open-source project involving web scraping of cargo transportation data from websites in Kazakhstan and the CIS.',
       'Conducted data analysis and authored a comprehensive post to suggest top three profitable business models, considering route, truck type, products.',

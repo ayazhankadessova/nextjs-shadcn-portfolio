@@ -19,6 +19,7 @@ export type Project = {
   points: string[]
   github: string
   demo: string
+  link?: string | null
 }
 
 export interface Image {

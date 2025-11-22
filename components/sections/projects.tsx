@@ -45,9 +45,20 @@ export default function ProjectsPage({
           >
             {/* Content Section */}
             <div className='sm:order-2'>
-              <h3 className='text-lg font-medium tracking-tight'>
-                {project.title}
-              </h3>
+              {project.link ? (
+                <Link href={project.link} className='block w-fit group'>
+                  <h3 className='text-lg font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center gap-1'>
+                    <span>{project.title}</span>
+                    <span className='font-semibold inline-block transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-0.5'>
+                      ↗
+                    </span>
+                  </h3>
+                </Link>
+              ) : (
+                <h3 className='text-lg font-medium tracking-tight'>
+                  {project.title}
+                </h3>
+              )}
               <p className='text-sm text-muted-foreground mt-1 mb-4'>
                 {project.description}
               </p>
