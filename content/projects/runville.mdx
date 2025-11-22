@@ -1,13 +1,12 @@
 ---
-title: Runville Feature Exploration
-description: Design explorations that made the Runville running app simpler, faster, and more shareable.
+title: Runville Habit Builder Case Study
+description: Reducing friction for 1,000+ runners with guided onboarding, adaptive sessions, and social-sharing UX.
 published: true
 tags: ['Runville', 'uiux']
 image: /projects/project-1.png
 ---
-# Runville: Building Lasting Running Habits
 
-As the UI designer for Runville, a lifestyle learning app that helps people create sustainable running routines, I focused on simplifying the experience for beginners. The product already showed promise with more than 1,000 downloads, strong satisfaction scores, and a cost per download three times lower than similar apps. My work centered on keeping that momentum by pairing personalization features with accessible design.
+As the UI designer for Runville, a lifestyle learning app that helps people create sustainable running routines, I focused on simplifying the experience for beginners. The product already showed promise with **more than 1,000 downloads**, strong satisfaction scores, and a cost per download that was **3× lower** than similar apps. My work centered on keeping that momentum by pairing personalization features with accessible design.
 
 <img
 	src='/projects/runville/hero.png'
@@ -24,9 +23,9 @@ As the UI designer for Runville, a lifestyle learning app that helps people crea
 
 ## Ideation and Solutions
 
-### Onboarding Stories
+### Feature 1: Onboarding Stories
 
-I designed a six-story onboarding flow inspired by Instagram. Each story highlights a core feature, demonstrates the relevant taps, and sets user expectations. This format immediately answered the most common support questions and reduced the time it took for users to feel confident exploring the interface.
+I designed a **six-story onboarding flow** inspired by Instagram. Each story highlights a core feature, demonstrates the relevant taps, and sets user expectations. This format immediately answered the most common support questions and reduced the time it took for users to feel confident exploring the interface.
 
 <div
 	style={{
@@ -36,12 +35,12 @@ I designed a six-story onboarding flow inspired by Instagram. Each story highlig
 		alignItems: 'flex-start',
 		flexWrap: 'wrap',
 		rowGap: '0.75rem',
-		maxWidth: '840px',
+		maxWidth: '860px',
 		margin: '1rem auto 0',
 	}}
 >
 	{[
-		'/projects/runville/onboarding-stories/onb-1.png',
+		// '/projects/runville/onboarding-stories/onb-1.png',
 		'/projects/runville/onboarding-stories/onb-2.png',
 		'/projects/runville/onboarding-stories/onb-3.png',
 		'/projects/runville/onboarding-stories/onb-4.png',
@@ -52,15 +51,15 @@ I designed a six-story onboarding flow inspired by Instagram. Each story highlig
 			key={src}
 			src={src}
 			alt={`Runville onboarding story ${index + 1}`}
-			style={{ width: '120px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			style={{ width: '160px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
 			loading='lazy'
 		/>
 	))}
 </div>
 
-### Daily Session Generation
+### Feature 2: Daily Session Generation
 
-To eliminate choice paralysis, we shifted from weekly planning to a single adaptive daily workout. The session draws from the information gathered during registration and offers three simple actions: accept, shuffle for a new option, or adjust advanced settings such as intensity or run type. The update respected the behavior of tired or casual runners who just wanted to get moving quickly.
+To eliminate choice paralysis, we shifted from weekly planning to a single adaptive daily workout. The session draws from the information gathered during registration and offers **three simple actions**: accept, shuffle for a new option, or adjust advanced settings such as intensity or run type. The update respected the behavior of tired or casual runners who just wanted to get moving quickly.
 
 <div
 	style={{
@@ -70,7 +69,7 @@ To eliminate choice paralysis, we shifted from weekly planning to a single adapt
 		alignItems: 'flex-start',
 		flexWrap: 'wrap',
 		rowGap: '0.75rem',
-		maxWidth: '720px',
+		maxWidth: '860px',
 		margin: '1rem auto 0',
 	}}
 >
@@ -85,16 +84,22 @@ To eliminate choice paralysis, we shifted from weekly planning to a single adapt
 			key={src}
 			src={src}
 			alt={`Runville daily session view ${index + 1}`}
-			style={{ width: '120px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			style={{ width: '160px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
 			loading='lazy'
 		/>
 	))}
 </div>
 
 
-### Image Generation Tool
+### Feature 3: Image Generation Tool
 
-For higher engagement, I introduced a lightweight image generator. Runners can select templates, combine them with their own photos and workout stats, and instantly publish to social channels. The feature taps into existing sharing habits and encourages organic app promotion.
+For higher engagement, I designed a **lightweight image generator** that enables runners to:
+
+- Select from **curated templates** that match their aesthetic
+- Combine them with **personal photos and workout stats**
+- **Instantly publish** to social channels like Instagram
+
+The feature taps into existing sharing habits and encourages **organic app promotion**.
 
 <div
 	style={{
@@ -104,7 +109,7 @@ For higher engagement, I introduced a lightweight image generator. Runners can s
 		alignItems: 'flex-start',
 		flexWrap: 'wrap',
 		rowGap: '0.75rem',
-		maxWidth: '720px',
+		maxWidth: '860px',
 		margin: '1rem auto 0',
 	}}
 >
@@ -119,15 +124,21 @@ For higher engagement, I introduced a lightweight image generator. Runners can s
 			key={src}
 			src={src}
 			alt={`Runville image generator screen ${index + 1}`}
-			style={{ width: '120px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			style={{ width: '160px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
 			loading='lazy'
 		/>
 	))}
 </div>
 
-### Library Tab Expansion
+### Feature 4: Library Tab Expansion
 
-I also mapped the structure for a refreshed library tab. The area mixes free and premium workouts, expert-written articles on topics like fueling or marathon prep, and quick AI follow ups. The goal was to lengthen in-app sessions and demonstrate the value of upgrading without creating a paywall wall of text.
+I also mapped the structure for a **refreshed library tab** that includes:
+
+- **Free and premium workouts** to support a freemium model
+- **Expert-written articles** on nutrition, marathon prep, and training science
+- **Quick AI follow-ups** for personalized guidance
+
+The goal was to **lengthen in-app sessions** and demonstrate premium value without creating an overwhelming paywall experience.
 
 <div
 	style={{
@@ -137,7 +148,7 @@ I also mapped the structure for a refreshed library tab. The area mixes free and
 		alignItems: 'flex-start',
 		flexWrap: 'wrap',
 		rowGap: '0.75rem',
-		maxWidth: '720px',
+		maxWidth: '860px',
 		margin: '1rem auto 0',
 	}}
 >
@@ -151,7 +162,7 @@ I also mapped the structure for a refreshed library tab. The area mixes free and
 			key={src}
 			src={src}
 			alt={`Runville library view ${index + 1}`}
-			style={{ width: '120px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			style={{ width: '160px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
 			loading='lazy'
 		/>
 	))}

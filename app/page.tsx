@@ -14,7 +14,7 @@ export default function MainPage() {
   return (
     <>
       <SiteHeader />
-      <div className='container max-w-4xl mx-auto px-6 md:px-8 py-16'>
+      <div className='container max-w-5xl mx-auto px-6 md:px-8 py-16'>
         <Hero />
         <AboutPage variant='short' />
         <Experience variant='short' />

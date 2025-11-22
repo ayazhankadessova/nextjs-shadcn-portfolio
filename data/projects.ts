@@ -2,15 +2,16 @@ import { Project } from "@/types/data"
 
 export const projects: Project[] = [
   {
-    title: 'Runville - Lifestyle Running App',
-    description: 'Mobile App',
+    title: 'Runville',
+    description: 'Lifestyle running app UX redesign',
     image: '/projects/project-1.png',
-    tech: ['Next.js 14', 'TypeScript', 'Firebase', 'Socket.IO'],
+    tech: ['UI/UX', 'Figma'],
     link: '/projects/runville',
     points: [
-      'Developed real-time interactive learning platform that enhanced student engagement via live code collaboration between teachers and students',
-      'Integrated AI assistant, real-time progress tracking, and comprehensive curriculum management system',
-      "Revamped platform's UI and visual design using shadcn/ui",
+      'Led UX refresh for a lifestyle running app serving 1,000+ runners while maintaining a cost-per-download three times lower than competitors.',
+      'Produced a six-step onboarding story flow that dramatically reduced repeat navigation questions from first-time users.',
+      'Replaced weekly planning with adaptive daily sessions offering three quick actions (accept, shuffle, customize) to keep casual runners moving.',
+      'Designed an AI-powered image generator that encourages social sharing and boosts organic reach.',
     ],
     github: 'https://github.com/ayazhankadessova/python-bit',
     demo: 'https://python-bit.vercel.app',
