@@ -29,10 +29,16 @@ export const hobbies: Hobby[] = [
       'I find my greatest joy in outdoor activities. From early morning runs to volleyball matches that remind me of my university days, staying active is my way of maintaining balance. But nothing beats the thrill of skiing in Oskemen, Kazakhstan – trust me, its the best resort you will find!',
     images: [
       {
-        src: '/projects/project-1.png',
+        src: '/hobbies/skiing-1.png',
         alt: 'Skiing in Oskemen',
         className: 'rounded-lg',
-        title: 'Skiing in Oskemen',
+        title: 'Skiing',
+      },
+      {
+        src: '/hobbies/skiing-2.png',
+        alt: 'Skiing in Oskemen',
+        className: 'rounded-lg',
+        title: 'Sunset Skiing',
       },
     ],
     additionalContent: {
@@ -69,13 +75,13 @@ export const hobbies: Hobby[] = [
     title: 'Building Together',
     content:
       'This year, I threw myself into the hackathon scene, participating in six different events. From JP Morgans Code for Good to AUHack at Aarhus University, each experience taught me something new about collaboration and rapid innovation.',
-    images: [
-      {
-        src: '/projects/project-4.png',
-        alt: 'Hackathon team',
-        className: 'rounded-lg',
-      },
-    ],
+    // images: [
+    //   {
+    //     src: '/projects/project-4.png',
+    //     alt: 'Hackathon team',
+    //     className: 'rounded-lg',
+    //   },
+    // ],
     additionalContent: {
       type: 'grid',
       className: 'flex flex-row justify-center',
@@ -88,7 +94,7 @@ export const hobbies: Hobby[] = [
       'Some of my most cherished times are spent journalling, finding new coffee spots where I can sit, reflect, and just be.',
     images: [
       {
-        src: '/projects/project-4.png',
+        src: '/hobbies/hobbies-1.png',
         alt: 'Hackathon team',
         className: 'rounded-lg',
       },
