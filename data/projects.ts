@@ -5,7 +5,7 @@ export const projects: Project[] = [
     title: 'Runville',
     description: 'Lifestyle running app UX redesign',
     image: '/projects/runville/runville.png',
-    tech: ['UI/UX', 'Figma'],
+    tech: ['UI/UX', 'Figma', 'Mobile App Design'],
     link: '/projects/runville',
     points: [
       'Led UX refresh for a lifestyle running app serving 1,000+ runners while maintaining a cost-per-download three times lower than competitors.',
@@ -33,6 +33,22 @@ export const projects: Project[] = [
     demo: {
       text: 'View Website',
       url: 'https://www.pythonbit.io',
+    },
+  },
+  {
+    title: 'GitRoll',
+    description: 'AI-powered recruitment platform landing page',
+    image: '/projects/gitroll/gitroll.png',
+    tech: ['UI/UX', 'Figma', 'Web Design'],
+    link: '/projects/gitroll',
+    points: [
+      'Designed a landing page for an AI-powered platform that analyzes developer portfolios from GitHub, GitLab, and Bitbucket to help recruiters identify exceptional talent.',
+      'Created a complete design system from low-fidelity wireframes to high-fidelity prototypes with a curated color palette.',
+      'Delivered a polished landing page emphasizing data-driven vetting, three-step hiring process, and transparent pricing to differentiate from LinkedIn-focused competitors.',
+    ],
+    demo: {
+      text: 'View Figma Design',
+      url: 'https://www.figma.com/community/file/1480766524669063935/gitroll-landing-page',
     },
   },
   {
