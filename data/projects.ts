@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: 'Runville',
     description: 'Lifestyle running app UX redesign',
-    image: '/projects/project-1.png',
+    image: '/projects/runville/runville.png',
     tech: ['UI/UX', 'Figma'],
     link: '/projects/runville',
     points: [
@@ -13,8 +13,10 @@ export const projects: Project[] = [
       'Replaced weekly planning with adaptive daily sessions offering three quick actions (accept, shuffle, customize) to keep casual runners moving.',
       'Designed an AI-powered image generator that encourages social sharing and boosts organic reach.',
     ],
-    github: 'https://github.com/ayazhankadessova/python-bit',
-    demo: 'https://python-bit.vercel.app',
+    demo: {
+      text: 'View in App Store',
+      url: 'https://apps.apple.com/kz/app/runville/id6748053090',
+    },
   },
   {
     title: 'Interactive Python Learning Platform',
@@ -28,7 +30,10 @@ export const projects: Project[] = [
       "Revamped platform's UI and visual design using shadcn/ui",
     ],
     github: 'https://github.com/ayazhankadessova/python-bit',
-    demo: 'https://python-bit.vercel.app',
+    demo: {
+      text: 'View Website',
+      url: 'https://www.pythonbit.io',
+    },
   },
   {
     title: 'Senior Connect',
@@ -41,7 +46,10 @@ export const projects: Project[] = [
       'Implemented RESTful API with MongoDB to manage events and mentorship features, handling user progress tracking and event registrations.',
     ],
     github: 'https://github.com/ayazhankadessova/IOS_Senior_Connect',
-    demo: 'https://drive.google.com/file/d/18Rs692UOiqzLUJ_RCJdW9u_An0FQn8lA/view?usp=sharing',
+    demo: {
+      text: 'Watch Demo',
+      url: 'https://drive.google.com/file/d/18Rs692UOiqzLUJ_RCJdW9u_An0FQn8lA/view?usp=sharing',
+    },
   },
   {
     title: 'IoT Device Monitor',
@@ -56,7 +64,10 @@ export const projects: Project[] = [
       'IoT Hub: Integrated Azure services (WebSocket, PubSub) for real-time sensor data visualization.',
     ],
     github: 'https://github.com/ayazhankadessova/m5stick-iot-mobile',
-    demo: 'https://www.youtube.com/watch?v=uHNZBZxneeY',
+    demo: {
+      text: 'Watch on YouTube',
+      url: 'https://www.youtube.com/watch?v=uHNZBZxneeY',
+    },
   },
   {
     title: 'FAFA, cargo transportation business model',
@@ -70,6 +81,9 @@ export const projects: Project[] = [
     ],
     github:
       'https://github.com/ayazhankadessova/Portfolio-Projects/tree/main/FAFA',
-    demo: 'https://ayazhankad-coding.blogspot.com/2021/09/scraping-fafakz-for-almaty-delivery.html',
+    demo: {
+      text: 'Read Article',
+      url: 'https://ayazhankad-coding.blogspot.com/2021/09/scraping-fafakz-for-almaty-delivery.html',
+    },
   },
 ]

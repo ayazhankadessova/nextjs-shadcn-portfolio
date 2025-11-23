@@ -17,8 +17,11 @@ export type Project = {
   image: string
   tech: string[]
   points: string[]
-  github: string
-  demo: string
+  github?: string
+  demo?: {
+    text: string
+    url: string
+  }
   link?: string | null
 }
 
