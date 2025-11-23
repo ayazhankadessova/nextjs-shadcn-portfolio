@@ -9,6 +9,7 @@ export type Experience = {
     achievements: string[]
   }>
   link?: string
+  image?: string
 }
 
 export type Project = {

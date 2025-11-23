@@ -4,6 +4,7 @@ export const experiences: Experience[] = [
   {
     company: 'The Trade Desk',
     link: 'https://www.thetradedesk.com',
+    image: '/experiences/trade-desk.jpeg',
     location: 'Hong Kong',
     position: 'Software Engineering Intern',
     period: 'Jun. 2025 - Aug. 2025',

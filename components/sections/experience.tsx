@@ -2,14 +2,15 @@ import React from 'react'
 import { Badge } from '@/components/ui/badge'
 import { experiences } from '@/data/experience'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface ExperiencePageProps {
-  variant?: 'short' | 'default'
+  readonly variant?: 'short' | 'default'
 }
 
 export default function Experience({
   variant = 'default',
-}: ExperiencePageProps) {
+}: Readonly<ExperiencePageProps>) {
   const displayedExperience =
     variant === 'default' ? experiences : experiences.slice(0, 3)
 
@@ -24,12 +25,26 @@ export default function Experience({
             className='grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-4 sm:gap-6 md:gap-8'
           >
             {/* Date Section */}
-            <div className='text-sm text-muted-foreground font-medium'>
-              {exp.period}
+            <div className='sm:order-1'>
+              <div className='text-sm text-muted-foreground font-medium mb-4'>
+                {exp.period}
+              </div>
+              {exp.image && (
+                <div className='w-2/3 mx-auto sm:w-full hidden sm:block'>
+                  <Image
+                    src={exp.image}
+                    alt={exp.company}
+                    width={400}
+                    height={300}
+                    className='rounded-lg w-full h-auto'
+                    sizes='(max-width: 640px) 90vw, 33vw'
+                  />
+                </div>
+              )}
             </div>
 
             {/* Content Section */}
-            <div>
+            <div className='sm:order-2'>
               {exp.link ? (
                 <Link href={exp.link} className='block group'>
                   <div className='text-lg font-medium tracking-tight group-hover:text-primary transition-colors inline-flex items-center'>
@@ -78,6 +93,20 @@ export default function Experience({
                   </div>
                 </div>
               ))}
+
+              {/* Image on mobile - shown after content */}
+              {exp.image && (
+                <div className='w-2/3 mx-auto sm:hidden mt-6'>
+                  <Image
+                    src={exp.image}
+                    alt={exp.company}
+                    width={400}
+                    height={300}
+                    className='rounded-lg w-full h-auto'
+                    sizes='(max-width: 640px) 90vw, 33vw'
+                  />
+                </div>
+              )}
             </div>
           </div>
         ))}
