@@ -44,7 +44,9 @@ export default function ProjectDocPage({ params }: ProjectDocPageProps) {
           </p>
         ) : null}
         <hr className='my-4' />
-        <MDXContent code={project.body} />
+        <div style={{ contentVisibility: 'auto' }}>
+          <MDXContent code={project.body} />
+        </div>
       </article>
     </div>
   )

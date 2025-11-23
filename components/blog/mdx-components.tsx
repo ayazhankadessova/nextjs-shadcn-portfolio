@@ -29,8 +29,34 @@ const Button = ({ href, variant = 'default', size = 'default', children }: Butto
   )
 }
 
+// Optimized image component for MDX with blur placeholder
+interface OptimizedImageProps {
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  priority?: boolean
+  className?: string
+}
+
+const OptimizedImage = ({ src, alt, width = 800, height = 600, priority = false, className }: OptimizedImageProps) => {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      priority={priority}
+      placeholder="blur"
+      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCwAB//2Q=="
+      className={className}
+      style={{ width: '100%', height: 'auto' }}
+    />
+  )
+}
+
 const components = {
-  Image,
+  Image: OptimizedImage,
   Callout,
   Button,
 }

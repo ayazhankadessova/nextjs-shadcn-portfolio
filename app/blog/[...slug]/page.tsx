@@ -50,7 +50,9 @@ export default async function PostPage({ params }: PostPageProps) {
           </p>
         ) : null}
         <hr className='my-4' />
-        <MDXContent code={post.body} />
+        <div style={{ contentVisibility: 'auto' }}>
+          <MDXContent code={post.body} />
+        </div>
       </article>
     </div>
   )
