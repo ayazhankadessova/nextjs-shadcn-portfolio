@@ -16,7 +16,7 @@ export default function ProjectsPage({
   variant = 'default',
 }: ProjectsPageProps) {
   const displayedProjects =
-    variant === 'default' ? projects : projects.slice(0, 3)
+    variant === 'default' ? projects : projects.slice(0, 5)
 
   return (
     <section className='mb-16' id='projects'>

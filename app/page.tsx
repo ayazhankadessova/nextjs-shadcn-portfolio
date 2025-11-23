@@ -19,7 +19,7 @@ export default function MainPage() {
         <AboutPage variant='short' />
         <Experience variant='short' />
         <ProjectsPage variant='short' />
-        <BlogPage />
+        {/* <BlogPage /> */}
         <HobbiesPage variant='short' />
         <ContactPage />
       </div>

@@ -35,8 +35,8 @@ export default function ProjectDocPage({ params }: ProjectDocPageProps) {
 
   return (
     <div className='container max-w-5xl mx-auto px-6 md:px-8 py-10'>
-      <BackButton />
-      <article className='prose prose-img:rounded-xl max-w-none mt-2'>
+      <BackButton className='mb-6' />
+      <article className='prose prose-img:rounded-xl max-w-none'>
         <h1 className='mb-2'>{project.title}</h1>
         {project.description ? (
           <p className='text-xl mt-0 text-muted-foreground'>
