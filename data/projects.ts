@@ -8,10 +8,10 @@ export const projects: Project[] = [
     tech: ['UI/UX', 'Figma', 'Mobile App Design'],
     link: '/projects/runville',
     points: [
-      'Led UX refresh for a lifestyle running app serving 1,000+ runners while maintaining a cost-per-download three times lower than competitors.',
-      'Produced a six-step onboarding story flow that dramatically reduced repeat navigation questions from first-time users.',
+      'Led UX refresh for lifestyle running app serving 1,000+ runners with 3x lower cost-per-download than competitors',
       'Replaced weekly planning with adaptive daily sessions offering three quick actions (accept, shuffle, customize) to keep casual runners moving.',
-      'Designed an AI-powered image generator that encourages social sharing and boosts organic reach.',
+      'Designed six-step onboarding flow reducing navigation questions from first-time users',
+      'Created AI-powered image generator encouraging social sharing and organic reach',
     ],
     demo: [
       {
@@ -28,9 +28,9 @@ export const projects: Project[] = [
     tech: ['Next.js 14', 'TypeScript', 'Firebase', 'Socket.IO'],
     link: 'https://www.pythonbit.io',
     points: [
-      'Developed real-time interactive learning platform that enhanced student engagement via live code collaboration between teachers and students',
-      'Integrated AI assistant, real-time progress tracking, and comprehensive curriculum management system',
-      "Revamped platform's UI and visual design using shadcn/ui",
+      'Built real-time learning platform with live code collaboration between teachers and students',
+      'Integrated AI assistant, progress tracking, and curriculum management',
+      'Revamped UI using shadcn/ui design system',
     ],
     github: 'https://github.com/ayazhankadessova/python-bit',
     demo: [
@@ -47,9 +47,9 @@ export const projects: Project[] = [
     tech: ['UI/UX', 'Figma', 'Web Design'],
     link: '/projects/gitroll',
     points: [
-      'Designed a landing page for an AI-powered platform that analyzes developer portfolios from GitHub, GitLab, and Bitbucket to help recruiters identify exceptional talent.',
-      'Created a complete design system from low-fidelity wireframes to high-fidelity prototypes with a curated color palette.',
-      'Delivered a polished landing page emphasizing data-driven vetting, three-step hiring process, and transparent pricing to differentiate from LinkedIn-focused competitors.',
+      'Designed landing page for AI-powered platform analyzing developer portfolios to help recruiters find talent',
+      'Created complete design system from wireframes to high-fidelity prototypes',
+      'Emphasized data-driven vetting and transparent pricing to differentiate from competitors',
     ],
     demo: [
       {
@@ -65,10 +65,9 @@ export const projects: Project[] = [
     tech: ['Next.js', 'UI/UX', 'Figma', 'Web Design'],
     link: '/projects/iftar',
     points: [
-      'Designed and developed a landing page for HKBU Iftar 2025, a community gathering celebrating Ramadan with 100+ participants.',
-      'Created a single-source-of-truth resource that dramatically reduced logistics inquiries about location, timing, and FAQs.',
-      'Applied design fundamentals including Gestalt principles, typography hierarchy (Pinyon Script + Montserrat), and a warm color palette.',
-      'Built with Next.js for efficient performance, server-side rendering, and responsive design across mobile and desktop.',
+      'Designed and developed landing page for community Ramadan event with 100+ participants, which I led',
+      'Reduced logistics inquiries with centralized event information',
+      'Applied Gestalt principles, typography hierarchy, and responsive design',
     ],
     github: 'https://github.com/ayazhankadessova/hkbu-iftar/tree/master',
     demo: [
@@ -93,8 +92,8 @@ export const projects: Project[] = [
     tech: ['Swift', 'Express.js', 'MongoDB'],
     link: 'https://drive.google.com/file/d/18Rs692UOiqzLUJ_RCJdW9u_An0FQn8lA/view?usp=sharing',
     points: [
-      'Built a digital learning iOS app using SwiftUI, helping seniors master technology through interactive tutorials in 4 sections, quizzes, mentorship, and progress tracking.',
-      'Implemented RESTful API with MongoDB to manage events and mentorship features, handling user progress tracking and event registrations.',
+      'Built iOS app helping seniors master technology through interactive tutorials, quizzes, and mentorship',
+      'Implemented RESTful API with MongoDB for progress tracking and event management',
     ],
     github: 'https://github.com/ayazhankadessova/IOS_Senior_Connect',
     demo: [
@@ -111,10 +110,9 @@ export const projects: Project[] = [
     tech: ['Swift', 'Express.js', 'MongoDB'],
     link: 'https://www.youtube.com/watch?v=uHNZBZxneeY',
     points: [
-      'Built a multi-tab IOT app with YouTube Demo integrating BLE tally counter, soil moisture monitoring, and Azure IoT Hub data visualization.',
-      'BLE Counter: Implemented real-time Bluetooth data collection from M5StickC with SwiftChart visualization.',
-      'Soil Monitor: Created automated moisture tracking system with color-coded alerts and 60-second data refresh.',
-      'IoT Hub: Integrated Azure services (WebSocket, PubSub) for real-time sensor data visualization.',
+      'Built multi-tab IoT app integrating BLE counter, soil moisture monitoring, and Azure IoT Hub',
+      'Implemented real-time Bluetooth data collection with SwiftChart visualization',
+      'Integrated Azure services for real-time sensor data visualization',
     ],
     github: 'https://github.com/ayazhankadessova/m5stick-iot-mobile',
     demo: [
@@ -131,8 +129,8 @@ export const projects: Project[] = [
     tech: ['Python', 'Beautiful Soup', 'Web Scraping', 'Data Science'],
     link: 'https://ayazhankad-coding.blogspot.com/2021/09/scraping-fafakz-for-almaty-delivery.html',
     points: [
-      'Developed an open-source project involving web scraping of cargo transportation data from websites in Kazakhstan and the CIS.',
-      'Conducted data analysis and authored a comprehensive post to suggest top three profitable business models, considering route, truck type, products.',
+      'Scraped cargo transportation data from Kazakhstan and CIS websites',
+      'Analyzed data to identify three profitable business models by route, truck type, and products',
     ],
     github:
       'https://github.com/ayazhankadessova/Portfolio-Projects/tree/main/FAFA',
