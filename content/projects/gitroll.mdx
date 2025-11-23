@@ -1,0 +1,338 @@
+---
+title: GitRoll Landing Page Design Case Study
+description: Designing an AI-powered recruitment platform landing page focused on data-driven developer vetting and streamlined hiring.
+published: true
+tags: ['GitRoll', 'UI/UX', 'Landing Page', 'Web Design']
+image: /projects/gitroll/gitroll.png
+---
+
+I was asked to design a landing page for **[GitRoll](https://gitroll.io)**, an **AI-powered platform** that analyzes developer portfolios to help recruiters identify exceptional talent. This case study outlines the structured design process I followed, emphasizing key UI/UX principles to create an intuitive, engaging, and effective user experience.
+
+### Project Goals
+
+The design prioritized highlighting GitRoll's unique value propositions:
+
+- **Differentiation from competitors** through AI-driven analysis of actual code contributions
+- **Data-driven vetting** for quality assurance
+- Access to a **global talent pool**
+- **Efficient hiring process** with three simple steps
+- Emphasis on **GitHub, GitLab, and Bitbucket** (distinguishing from LinkedIn-focused approaches)
+- **Clear pricing plans** for transparency
+
+---
+
+### 1. Initial Discovery and Requirements Gathering
+
+Prior to design commencement, I conducted a collaborative meeting with the GitRoll team to align on core objectives. This session clarified essential elements to emphasize:
+
+- The platform's **superiority over traditional recruitment sites** through AI-driven analysis of actual code contributions
+- Focus on **data-driven vetting** for quality assurance
+- Access to a **global talent pool** and streamlined hiring efficiency
+- The user-friendly **three-step process** for identifying talent
+- Prioritization of code repositories (**GitHub, GitLab, Bitbucket**) as indicators of genuine builders
+- **Transparent pricing tiers** to facilitate informed decisions
+
+This foundational step ensured the design supported business goals while adhering to user-centered principles.
+
+---
+
+### 2. Research and Inspiration
+
+To inform the design, I analyzed:
+
+**Visual design elements:**
+- Shape, color, line, form, space, texture, typography
+
+**Design principles:**
+- Hierarchy, contrast, balance, scale, dominance, unity
+
+**Gestalt principles:**
+- Figure-ground, similarity, proximity, continuity, closure
+
+**Common layouts:**
+- Split-screen, grid, and single-column formats for optimal information flow
+
+<div
+	style={{
+		display: 'flex',
+		gap: '0.75rem',
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		flexWrap: 'wrap',
+		rowGap: '0.75rem',
+		maxWidth: '860px',
+		margin: '1rem auto 0',
+	}}
+>
+	{[
+		// '/projects/runville/onboarding-stories/onb-1.png',
+		'/projects/gitroll/research-inpo/research-inpo-2.png',
+		// '/projects/gitroll/research-inpo/research-inpo-1.png',
+	].map((src, index) => (
+		<img
+			key={src}
+			src={src}
+			alt={`Runville onboarding story ${index + 1}`}
+			style={{ width: '350px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			loading='lazy'
+		/>
+	))}
+</div>
+
+#### Competitive Analysis
+
+I curated an inspiration board by reviewing comparable platforms:
+
+- **ArcDev:** Effective use of black, yellow, and blue palettes to highlight text through contrast and dominance, enhancing readability
+- **Imagi:** Strong application of contrast, balance, scale, and dominance to create cohesive visual hierarchy
+
+Drawing from these, I synthesized best practices to guide GitRoll's aesthetic, ensuring a professional yet innovative tone.
+
+<div
+	style={{
+		display: 'flex',
+		gap: '0.75rem',
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		flexWrap: 'wrap',
+		rowGap: '0.75rem',
+		maxWidth: '860px',
+		margin: '1rem auto 0',
+	}}
+>
+	{[
+		// '/projects/runville/onboarding-stories/onb-1.png',
+		'/projects/gitroll/research-inpo/research-inpo-1.png',
+	].map((src, index) => (
+		<img
+			key={src}
+			src={src}
+			alt={`Runville onboarding story ${index + 1}`}
+			style={{ width: '350px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			loading='lazy'
+		/>
+	))}
+</div>
+
+---
+
+### 3. Low-Fidelity Wireframing
+
+I began with **low-fidelity wireframes** to rapidly prototype the structure:
+
+- Utilized a standard wireframing kit comprising icons, buttons, logos, lines, shapes, and placeholders
+- Focused on **layout and functionality** without incorporating colors or images
+- Used grayscale approach to facilitate **quick iterations**
+- Emphasized content organization and user flow
+
+<div
+	style={{
+		display: 'flex',
+		gap: '0.75rem',
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		flexWrap: 'wrap',
+		rowGap: '0.75rem',
+		maxWidth: '860px',
+		margin: '1rem auto 0',
+	}}
+>
+	{[
+		// '/projects/runville/onboarding-stories/onb-1.png',
+		'/projects/gitroll/wireframe/wireframe-1.png',
+	].map((src, index) => (
+		<img
+			key={src}
+			src={src}
+			alt={`Runville onboarding story ${index + 1}`}
+			style={{ width: '350px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			loading='lazy'
+		/>
+	))}
+</div>
+
+**Key sections mapped:**
+- Hero banner
+- Differentiation points
+- Process steps
+- Talent examples
+- Pricing
+
+This validated alignment with requirements before advancing to the next phase.
+
+<div
+	style={{
+		display: 'flex',
+		gap: '0.75rem',
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		flexWrap: 'wrap',
+		rowGap: '0.75rem',
+		maxWidth: '860px',
+		margin: '1rem auto 0',
+	}}
+>
+	{[
+		// '/projects/runville/onboarding-stories/onb-1.png',
+		'/projects/gitroll/wireframe/wireframe-2.png',
+	].map((src, index) => (
+		<img
+			key={src}
+			src={src}
+			alt={`Runville onboarding story ${index + 1}`}
+			style={{ width: '350px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			loading='lazy'
+		/>
+	))}
+</div>
+
+---
+
+### 4. Mid-Fidelity Development
+
+Building on approved low-fidelity designs, I progressed to **mid-fidelity wireframes**:
+
+**Design system specifications:**
+- **1280px frame width** with a 12-column grid
+- **24px gutter**, **50px margins** for responsive layout
+- Refined navigation bar, text blocks, and icons to support visual hierarchy
+
+<div
+	style={{
+		display: 'flex',
+		gap: '0.75rem',
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		flexWrap: 'wrap',
+		rowGap: '0.75rem',
+		maxWidth: '860px',
+		margin: '1rem auto 0',
+	}}
+>
+	{[
+		// '/projects/runville/onboarding-stories/onb-1.png',
+		'/projects/gitroll/mid-fi/mid-fi-1.png',
+	].map((src, index) => (
+		<img
+			key={src}
+			src={src}
+			alt={`Runville onboarding story ${index + 1}`}
+			style={{ width: '350px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			loading='lazy'
+		/>
+	))}
+</div>
+
+**Imagery sourcing:**
+- Integrated provided photographs or sourced alternatives from **Unsplash** and **Pexels**
+- Evolved placeholders into realistic representations
+
+This stage allowed for revisions based on feedback, balancing usability and aesthetic potential without full color implementation.
+
+<div
+	style={{
+		display: 'flex',
+		gap: '0.75rem',
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		flexWrap: 'wrap',
+		rowGap: '0.75rem',
+		maxWidth: '860px',
+		margin: '1rem auto 0',
+	}}
+>
+	{[
+		// '/projects/runville/onboarding-stories/onb-1.png',
+		'/projects/gitroll/mid-fi/mid-fi-2.png',
+	].map((src, index) => (
+		<img
+			key={src}
+			src={src}
+			alt={`Runville onboarding story ${index + 1}`}
+			style={{ width: '350px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			loading='lazy'
+		/>
+	))}
+</div>
+
+---
+
+### 5. High-Fidelity Design and Color Implementation
+
+In the **high-fidelity phase**, I introduced a tailored color scheme inspired by Behance explorations of technology-themed landing pages:
+
+**Color palette:**
+- **Tech Blue (Primary):** Trust, professionalism, and stability—reflecting GitRoll's reliable data-driven methodology
+- **Yellow (Secondary):** Complementary to tech Green, appears vibrant next to tech blue.
+- **Teal Green (Accent):** Growth, discovery, and innovation—underscoring the platform's forward-thinking talent assessment
+
+<div
+	style={{
+		display: 'flex',
+		gap: '0.75rem',
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		flexWrap: 'wrap',
+		rowGap: '0.75rem',
+		maxWidth: '860px',
+		margin: '1rem auto 0',
+	}}
+>
+	{[
+		// '/projects/runville/onboarding-stories/onb-1.png',
+		'/projects/gitroll/hi-fi/hi-fi-1.png',
+        '/projects/gitroll/hi-fi/hi-fi-2.png',
+	].map((src, index) => (
+		<img
+			key={src}
+			src={src}
+			alt={`Runville onboarding story ${index + 1}`}
+			style={{ width: '350px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			loading='lazy'
+		/>
+	))}
+</div>
+
+**Design refinements:**
+- Enhanced **contrast and dominance** to unify the design
+- Optimized **typography** for readability with balanced spacing and scale
+- Guided user attention through **visual hierarchy**
+
+The final high-fidelity prototype incorporated all highlighted elements, resulting in a polished landing page that effectively communicates GitRoll's value, streamlines user journeys, and adheres to established UI/UX best practices.
+
+<div
+	style={{
+		display: 'flex',
+		gap: '0.75rem',
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		flexWrap: 'wrap',
+		rowGap: '0.75rem',
+		maxWidth: '860px',
+		margin: '1rem auto 0',
+	}}
+>
+	{[
+		// '/projects/runville/onboarding-stories/onb-1.png',
+		'/projects/gitroll/hi-fi/hi-fi-3.png',
+	].map((src, index) => (
+		<img
+			key={src}
+			src={src}
+			alt={`Runville onboarding story ${index + 1}`}
+			style={{ width: '350px', height: 'auto', borderRadius: '12px', flex: '0 1 120px' }}
+			loading='lazy'
+		/>
+	))}
+</div>
+
+---
+
+### Outcome
+
+This project demonstrates my expertise in:
+- **Iterative design processes**
+- **Principled visual composition**
+- **Strategic alignment with client needs**
+
+The result is a landing page that not only meets functional requirements but also elevates user engagement through thoughtful UI/UX design.

@@ -17,8 +17,12 @@ export type Project = {
   image: string
   tech: string[]
   points: string[]
-  github: string
-  demo: string
+  github?: string
+  demo?: Array<{
+    text: string
+    url: string
+  }>
+  link?: string | null
 }
 
 export interface Image {

@@ -38,11 +38,11 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div className='container max-w-4xl mx-auto px-6 md:px-8 py-10'>
-      <div className='flex items-start justify-between'>
+      <div className='flex items-start justify-between mb-6'>
         <BackButton />
         <SharePost fullLink={fullLinkGenerated} />
       </div>
-      <article className='prose prose-img:rounded-xl max-w-none mt-2'>
+      <article className='prose prose-img:rounded-xl max-w-none'>
         <h1 className='mb-2'>{post.title}</h1>
         {post.description ? (
           <p className='text-xl mt-0 text-muted-foreground'>

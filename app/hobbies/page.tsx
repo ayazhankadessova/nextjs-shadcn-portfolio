@@ -21,7 +21,7 @@ export default function HobbiesPage() {
               <div
                 className={
                   hobby.additionalContent?.type === 'grid'
-                    ? hobby.additionalContent.className
+                    ? `${hobby.additionalContent.className} gap-4`
                     : ''
                 }
               >

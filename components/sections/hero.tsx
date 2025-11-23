@@ -36,11 +36,11 @@ export default function Hero() {
         </h1> */}
 
         <h2 className='text-2xl font-bold text-muted-foreground mb-4'>
-          Software Developer
+          UI/UX Engineer
         </h2>
         <p className='text-md text-muted-foreground mb-8 max-w-2xl'>
-          I bring ideas to life through carefully crafted, accessible web
-          solutions.
+          I bridge the gap between design and development, creating intuitive
+          experiences backed by solid engineering.
         </p>
 
         {/* Buttons and medium screen socials */}
