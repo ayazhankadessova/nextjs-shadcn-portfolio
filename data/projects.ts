@@ -22,7 +22,8 @@ export const projects: Project[] = [
   },
   {
     title: 'Interactive Python Learning Platform',
-    description: 'Web App',
+    description:
+      'Web App for Real-Time Code Collaboration Design + Development',
     image: '/projects/project-1.png',
     tech: ['Next.js 14', 'TypeScript', 'Firebase', 'Socket.IO'],
     link: 'https://www.pythonbit.io',
@@ -41,7 +42,7 @@ export const projects: Project[] = [
   },
   {
     title: 'GitRoll',
-    description: 'AI-powered recruitment platform landing page',
+    description: 'AI-powered recruitment platform Landing Page Design',
     image: '/projects/gitroll/gitroll.png',
     tech: ['UI/UX', 'Figma', 'Web Design'],
     link: '/projects/gitroll',
@@ -59,7 +60,7 @@ export const projects: Project[] = [
   },
   {
     title: 'HKBU Iftar 2025',
-    description: 'Event landing page design & development',
+    description: 'Event Landing Page Design + Development',
     image: '/projects/iftar/iftar.png',
     tech: ['Next.js', 'UI/UX', 'Figma', 'Web Design'],
     link: '/projects/iftar',

@@ -16,11 +16,10 @@ export function BlogFooter() {
               {siteConfig.name}
             </Link>
             <p className='text-sm text-muted-foreground mb-4'>
-              Building digital experiences with clean aesthetics and thoughtful
-              interactions. I specialize in creating modern web applications
-              that combine beautiful design with powerful functionality. Through
-              careful attention to detail and user-centered development, I craft
-              solutions that make a lasting impact.
+              UI/UX Engineer bridging design and development to create
+              intuitive digital experiences. I craft interfaces that blend
+              aesthetic excellence with technical precision, transforming ideas
+              into user-centered solutions.
             </p>
             <AllSocials />
           </div>

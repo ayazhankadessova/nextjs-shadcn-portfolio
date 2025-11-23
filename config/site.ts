@@ -5,7 +5,7 @@
 export const siteConfig = {
   name: 'AyazhanKad',
   url: 'https://AyazhanKad.io',
-  description: 'Hey, I am Aya :) I like building apps!',
+  description: 'UI/UX Engineer bridging design and development',
   socials: {
     discord: 'https://discord.com/invite/EEw3u9PVqA',
     linkedin: 'https://www.linkedin.com/in/ayazhankad',
