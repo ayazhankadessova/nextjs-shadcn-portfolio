@@ -80,7 +80,7 @@ export default function ProjectsPage({
                   </Badge>
                 ))}
               </div>
-              <div className='flex gap-4'>
+              <div className='flex flex-wrap gap-4'>
                 {project.github && (
                   <Link href={project.github} passHref>
                     <Button
@@ -93,18 +93,18 @@ export default function ProjectsPage({
                     </Button>
                   </Link>
                 )}
-                {project.demo && (
-                  <Link href={project.demo.url} passHref>
+                {project.demo?.map((demoItem) => (
+                  <Link key={demoItem.url} href={demoItem.url} passHref>
                     <Button
                       variant='ghost'
                       size='sm'
                       className='text-sm gap-2 hover:bg-transparent hover:text-primary'
                     >
                       <ExternalLink className='w-4 h-4' />
-                      {project.demo.text}
+                      {demoItem.text}
                     </Button>
                   </Link>
-                )}
+                ))}
               </div>
             </div>
 

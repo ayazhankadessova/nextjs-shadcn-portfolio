@@ -18,10 +18,10 @@ export type Project = {
   tech: string[]
   points: string[]
   github?: string
-  demo?: {
+  demo?: Array<{
     text: string
     url: string
-  }
+  }>
   link?: string | null
 }
 
