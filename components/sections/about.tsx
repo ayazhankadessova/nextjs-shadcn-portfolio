@@ -7,7 +7,7 @@ export default function AboutPage() {
       <h1 className='text-xl font-semibold mb-8'>A B O U T</h1>
       <div className='space-y-6 text-muted-foreground'>
         <p className='space-y-4 leading-relaxed'>
-          I am a UI/UX engineer who bridges the gap between design and
+          I am a Engineer who bridges the gap between design and
           development. Currently, I am building{' '}
           <a
             href='https://python-bit.vercel.app'
@@ -39,7 +39,7 @@ export default function AboutPage() {
         <p>
           Throughout my journey in tech, I discovered my passion lies at the
           intersection of design and engineering. This realization led me to
-          become a UI/UX engineer, eg someone who not only builds functional
+          become a Engineer, eg someone who not only builds functional
           solutions but also crafts delightful user experiences. Feel free to
           explore my experiences and projects, and reach out whenever
           you&apos;re ready. I&apos;m always here to chat!

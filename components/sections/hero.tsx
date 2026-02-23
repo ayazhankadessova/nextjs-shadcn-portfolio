@@ -36,7 +36,7 @@ export default function Hero() {
         </h1> */}
 
         <h2 className='text-2xl font-bold text-muted-foreground mb-4'>
-          UI/UX Engineer
+          Engineer
         </h2>
         <p className='text-md text-muted-foreground mb-8 max-w-2xl'>
           I bridge the gap between design and development, creating intuitive

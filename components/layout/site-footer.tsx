@@ -16,7 +16,7 @@ export function BlogFooter() {
               {siteConfig.name}
             </Link>
             <p className='text-sm text-muted-foreground mb-4'>
-              UI/UX Engineer bridging design and development to create
+              Engineer bridging design and development to create
               intuitive digital experiences. I craft interfaces that blend
               aesthetic excellence with technical precision, transforming ideas
               into user-centered solutions.
