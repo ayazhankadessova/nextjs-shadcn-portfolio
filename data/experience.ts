@@ -2,6 +2,23 @@ import { Experience } from '@/types/data'
 
 export const experiences: Experience[] = [
   {
+    company: 'Lean Technologies',
+    image: '/experiences/lean-technologies-team.jpg',
+    location: 'Riyadh, Saudi Arabia',
+    position: 'Software Engineering Intern',
+    period: 'Jun. 2026 - Aug. 2026',
+    projects: [
+      {
+        name: 'Payouts Onboarding',
+        tech: ['Decision Engines', 'Feature Flags', 'Client Provisioning'],
+        achievements: [
+          'Redesigned and built Lean\'s payouts onboarding flow end-to-end - a decision engine and interactive client roadmap - collaborating with solution engineers to identify onboarding pain points and cutting client onboarding from about four weeks to days for Lean\'s 350+ fintech clients.',
+          'Automated client enablement by replacing a manual solution-engineer approval step with idempotent provisioning that enables required feature flags and application traits, while deriving onboarding status from real external state.',
+        ],
+      },
+    ],
+  },
+  {
     company: 'The Trade Desk',
     link: 'https://www.thetradedesk.com',
     image: '/experiences/trade-desk.jpeg',
