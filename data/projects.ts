@@ -26,7 +26,7 @@ export const projects: Project[] = [
       'Web App for Real-Time Code Collaboration Design + Development',
     image: '/projects/project-1.png',
     tech: ['Next.js 14', 'TypeScript', 'Firebase', 'Socket.IO'],
-    link: 'https://www.pythonbit.io',
+    link: 'https://python-bit-sigma.vercel.app/',
     points: [
       'Built real-time learning platform with live code collaboration between teachers and students',
       'Integrated AI assistant, progress tracking, and curriculum management',
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     demo: [
       {
         text: 'View Website',
-        url: 'https://www.pythonbit.io',
+        url: 'https://python-bit-sigma.vercel.app/',
       },
     ],
   },

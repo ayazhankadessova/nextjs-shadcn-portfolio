@@ -10,7 +10,7 @@ export default function AboutPage() {
           I am a Engineer who bridges the gap between design and
           development. Currently, I am building{' '}
           <a
-            href='https://python-bit.vercel.app'
+            href='https://python-bit-sigma.vercel.app/'
             target='_blank'
             rel='noopener noreferrer'
             className='text-foreground hover:text-foreground/80 transition-colors'
