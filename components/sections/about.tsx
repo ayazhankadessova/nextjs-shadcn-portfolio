@@ -7,9 +7,16 @@ export default function AboutPage() {
       <h1 className='text-xl font-semibold mb-8'>A B O U T</h1>
       <div className='space-y-6 text-muted-foreground'>
         <p className='space-y-4 leading-relaxed'>
-          I am a software engineer and MSc Computer Science student at King
-          Abdullah University of Science and Technology (KAUST), following my
-          BSc in Computer Science from{' '}
+          I am a software engineer and MSc Computer Science student at{' '}
+          <a
+            href='https://kaust.edu.sa/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-foreground hover:text-foreground/80 transition-colors'
+          >
+            King Abdullah University of Science and Technology (KAUST)
+          </a>
+          , following my BSc in Computer Science from{' '}
           <a
             href='https://www.hkbu.edu.hk/'
             target='_blank'
